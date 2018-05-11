@@ -11,6 +11,7 @@
 		<module>express-client</module>
 		<module>express-service</module>
 		<module>express-web</module>
+		<module>express-dao</module>
 	</modules>
 	
 	<properties>

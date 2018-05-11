@@ -1,15 +1,14 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>edu.zut.cs.express</groupId>
-    <artifactId>express</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>express-dao</artifactId>
-  
-  <dependencies>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>edu.zut.cs.javaee</groupId>
+		<artifactId>dream</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>express-dao</artifactId>
+	<dependencies>
 		<dependency>
 			<groupId>edu.zut.cs.express</groupId>
 			<artifactId>express-base</artifactId>
@@ -21,6 +20,11 @@
 			<artifactId>jaxb-api</artifactId>
 			<version>2.3.0</version>
 		</dependency>
+		<dependency>  
+    <groupId>org.springframework</groupId>  
+    <artifactId>spring-beans</artifactId>  
+    <version>4.2.5.RELEASE</version>  
+</dependency> 
 	</dependencies>
 
 	<build>
@@ -36,7 +40,7 @@
 					<scriptAction>drop-and-create</scriptAction>
 					<databaseAction>drop-and-create</databaseAction>
 					<vendor>hibernate</vendor>
-					<packageToScan>edu.zut.cs.express</packageToScan>
+					<packageToScan>edu.zut.cs.javaee.express</packageToScan>
 					<jdbcDriver>com.mysql.jdbc.Driver</jdbcDriver>
 					<jdbcUrl>jdbc:mysql://202.196.37.91:3306/express</jdbcUrl>
 					<jdbcUser>zutnlp</jdbcUser>
@@ -88,5 +92,5 @@
 			</plugin>
 		</plugins>
 	</build>
- 
+
 </project>
