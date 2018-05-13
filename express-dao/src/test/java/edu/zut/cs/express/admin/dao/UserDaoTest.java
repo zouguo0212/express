@@ -1,4 +1,4 @@
-package edu.zut.cs.express.module.dao;
+package edu.zut.cs.express.admin.dao;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import edu.zut.cs.express.module.domain.user;
+import edu.zut.cs.express.admin.domain.user;
 import edu.zut.cs.express.base.dao.Daoconfig;
 
 @RunWith(SpringJUnit4ClassRunner.class)
