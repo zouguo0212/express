@@ -7,7 +7,7 @@
         <artifactId>express</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>dream-service</artifactId>
+    <artifactId>express-service</artifactId>
     <dependencies>
         <dependency>
             <groupId>edu.zut.cs.express</groupId>
