@@ -1,31 +1,23 @@
 package edu.zut.cs.express.admin.dao;
 
+import java.util.List;
+
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import edu.zut.cs.express.admin.domain.user;
-import edu.zut.cs.express.base.dao.Daoconfig;
+import edu.zut.cs.express.base.dao.GenericDaoTestCase;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = Daoconfig.class)
-class UserDaoTest {
+public class UserDaoTest extends GenericDaoTestCase<Long, user, userdao> {
 
 	@Autowired
 	userdao userDao;
 
 	@Test
-	void test() {
-		String username = "world";
-		user query = new user();
-		// List<User> result = this.userDao.findOne(null);
+	public void testFindAll() {
 
-		user expectedUser = new user();
-		// expectedUser.setUsername(username);
-		// assertEquals(user, expectedUser);
-		// assertEquals(user.getUsername(), expectedUser.getUsername());
+		List<user> result = this.userDao.findAll();
+
 	}
 
 }
