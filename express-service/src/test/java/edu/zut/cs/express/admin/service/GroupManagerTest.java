@@ -10,6 +10,7 @@ public class GroupManagerTest extends GenericTreeManagerTestCase<Long, Group, Gr
 
 	GroupManager groupManager;
 
+
 	@Autowired
 	public void setGroupManager(GroupManager groupManager) {
 		this.groupManager = groupManager;

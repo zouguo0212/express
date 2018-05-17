@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import edu.zut.cs.express.base.domain.BaseEntity;
 import edu.zut.cs.express.admin.domain.Group;
 
-@Table(name = "T_ADMIN_USER")
+@Table(name = "T_ADMIN_Journal")
 @Entity
 public class Journal extends BaseEntity{
 	/**

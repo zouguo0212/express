@@ -8,5 +8,5 @@ import edu.zut.cs.express.base.service.impl.GenericManagerImpl;
 
 @Component
 public class RoleManagerImpl extends GenericManagerImpl<Role, Long> implements RoleManager {
-
 }
+
