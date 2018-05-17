@@ -10,9 +10,9 @@ import javax.persistence.Table;
 import edu.zut.cs.express.base.domain.BaseEntity;
 import edu.zut.cs.express.admin.domain.Group;
 
-@Table(name = "T_ADMIN_USER")
+@Table(name = "T_ADMIN_Login")
 @Entity
-public class user extends BaseEntity {
+public class Login extends BaseEntity {
 
 	/**
 	 * 
@@ -27,16 +27,7 @@ public class user extends BaseEntity {
 
 	@Column(name = "EMAIL")
 	String email;
-	
-	@Column(name = "TIME")
-	String time;
-	
-	@Column(name = "KIND")
-	String kind;
 
-	@Column(name = "EXPRESS_NUMBER")
-	String express_number;
-	
 	public Group getGroup() {
 		return group;
 	}
@@ -71,27 +62,6 @@ public class user extends BaseEntity {
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public String getTime() {
-		return time;
-	}
-
-	public void setTime(String time) {
-		this.time = time;
-	}
-	public String getKind() {
-		return kind;
-	}
-
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
-	public String getExpress_number() {
-		return express_number;
-	}
-
-	public void setExpress_number(String express_number) {
-		this.express_number = express_number;
 	}
 
 }
