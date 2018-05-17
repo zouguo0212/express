@@ -12,7 +12,7 @@ import edu.zut.cs.express.admin.domain.Group;
 
 @Table(name = "T_ADMIN_USER")
 @Entity
-public class user extends BaseEntity {
+public class user_order extends BaseEntity {
 
 	/**
 	 * 
