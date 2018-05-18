@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import edu.zut.cs.express.base.domain.BaseEntity;
 import edu.zut.cs.express.admin.domain.Group;
 
-@Table(name = "T_ADMIN_MANGER")
+@Table(name = "MANGER")
 @Entity
 public class Manger extends BaseEntity {
 
@@ -28,7 +28,7 @@ public class Manger extends BaseEntity {
 	@Column(name = "EMAIL")
 	String email;
 
-	public Group getGroup() {
+	/*public Group getGroup() {
 		return group;
 	}
 
@@ -38,7 +38,7 @@ public class Manger extends BaseEntity {
 	
 	@ManyToOne
 	@JoinColumn(name = "GROUP_ID")
-	Group group;
+	Group group;*/
 
 	public String getUsername() {
 		return mangername;
