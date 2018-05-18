@@ -1,41 +1,29 @@
 package edu.zut.cs.express.admin.domain;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
-import edu.zut.cs.express.base.domain.BaseTreeEntity;
+import edu.zut.cs.express.base.domain.BaseEntity;
+import edu.zut.cs.express.admin.domain.Group;
 
 @Table(name = "T_ADMIN_Pay")
 @Entity
-@NamedQueries({ @NamedQuery(name = "Group.getRoot", query = "select g from Group g where g.parent is null") })
-public class Pay extends BaseTreeEntity<Pay> {
+public class Pay extends BaseEntity {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -1751952224371998469L;
+	private static final long serialVersionUID = -4376674977047164142L;
 
 	@Column(name = "user")
-	user user;
-	public user getUser() {
-		return user;
-	}
-	public void setUser(user user) {
-		this.user = user;
-	}
-	public Manger getManger() {
-		return manger;
-	}
-	public void setManger(Manger manger) {
-		this.manger = manger;
-	}
-	@Column(name = "user")
-    Manger manger;
+	user use;
+	@Column(name = "manger")
+	Manger manger;
+
 	public Group getGroup() {
 		return group;
 	}
@@ -48,4 +36,22 @@ public class Pay extends BaseTreeEntity<Pay> {
 	@JoinColumn(name = "GROUP_ID")
 	Group group;
 
+
+	public user getUse() {
+		return use;
+	}
+
+	public void setUse(user use) {
+		this.use = use;
+	}
+
+	public Manger getManger() {
+		return manger;
+	}
+
+	public void setManger(Manger manger) {
+		this.manger = manger;
+	}
+
 }
+
