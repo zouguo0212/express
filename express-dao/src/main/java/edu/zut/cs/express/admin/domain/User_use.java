@@ -10,25 +10,38 @@ import javax.persistence.Table;
 import edu.zut.cs.express.base.domain.BaseEntity;
 import edu.zut.cs.express.admin.domain.Group;
 
-@Table(name = "MANGER")
+@Table(name = "T_ADMIN_USER")
 @Entity
-public class Manger extends BaseEntity {
+public class User_use extends BaseEntity {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -4376674977047164142L;
 
-	@Column(name = "MANGERNAME")
-	String mangername;
+	@Column(name = "USERNAME")
+	String username;
 
 	@Column(name = "PASSWORD")
 	String password;
 
 	@Column(name = "EMAIL")
 	String email;
+	
+	@Column(name = "TIME")
+	String time;
+	
+	@Column(name = "KIND")
+	String kind;
 
-	/*public Group getGroup() {
+	@Column(name = "EXPRESS_NUMBER")
+	String express_number;
+	
+	@Column(name ="EXPRESS_PHONE")
+	String express_phone;
+	
+
+	public Group getGroup() {
 		return group;
 	}
 
@@ -38,14 +51,14 @@ public class Manger extends BaseEntity {
 	
 	@ManyToOne
 	@JoinColumn(name = "GROUP_ID")
-	Group group;*/
+	Group group;
 
 	public String getUsername() {
-		return mangername;
+		return username;
 	}
 
 	public void setUsername(String username) {
-		this.mangername = username;
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -63,5 +76,34 @@ public class Manger extends BaseEntity {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public String getTime() {
+		return time;
+	}
 
+	public void setTime(String time) {
+		this.time = time;
+	}
+	public String getKind() {
+		return kind;
+	}
+
+	public void setKind(String kind) {
+		this.kind = kind;
+	}
+	public String getExpress_number() {
+		return express_number;
+	}
+
+	public void setExpress_number(String express_number) {
+		this.express_number = express_number;
+	}
+
+	public String getExpress_phone() {
+		return express_phone;
+	}
+
+	public void setExpress_phone(String express_phone) {
+		this.express_phone = express_phone;
+	}
+	
 }

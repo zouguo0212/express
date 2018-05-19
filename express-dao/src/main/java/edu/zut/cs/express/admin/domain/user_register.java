@@ -10,25 +10,31 @@ import javax.persistence.Table;
 import edu.zut.cs.express.base.domain.BaseEntity;
 import edu.zut.cs.express.admin.domain.Group;
 
-@Table(name = "MANGER")
+@Table(name = "T_ADMIN_USER")
 @Entity
-public class Manger extends BaseEntity {
+public class user_register extends BaseEntity {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -4376674977047164142L;
 
-	@Column(name = "MANGERNAME")
-	String mangername;
+	@Column(name = "USERNAME")
+	String username;
 
 	@Column(name = "PASSWORD")
 	String password;
 
 	@Column(name = "EMAIL")
 	String email;
-
-	/*public Group getGroup() {
+	
+	@Column(name = "SEX")
+	String sex;
+	
+	@Column(name = "PHONE")
+	String phone;
+	
+	public Group getGroup() {
 		return group;
 	}
 
@@ -38,14 +44,14 @@ public class Manger extends BaseEntity {
 	
 	@ManyToOne
 	@JoinColumn(name = "GROUP_ID")
-	Group group;*/
+	Group group;
 
 	public String getUsername() {
-		return mangername;
+		return username;
 	}
 
 	public void setUsername(String username) {
-		this.mangername = username;
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -63,5 +69,18 @@ public class Manger extends BaseEntity {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public String getSex() {
+		return sex;
+	}
 
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 }
