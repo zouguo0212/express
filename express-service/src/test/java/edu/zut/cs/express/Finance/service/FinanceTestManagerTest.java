@@ -33,9 +33,9 @@ public class FinanceTestManagerTest extends GenericManagerTestCase<Long,FinanceT
 	
 	@Test
 	public void FindAlltest() {
-		//List<FinanceTest> result = this.financeTestManager.FindAll();
+		List<FinanceTest> result = this.financeTestManager.FindAll();
 		
-		System.out.println("");
+		System.out.println(result.toString());
 	}
 
 }
