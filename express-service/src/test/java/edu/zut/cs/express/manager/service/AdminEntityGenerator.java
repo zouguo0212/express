@@ -1,8 +1,11 @@
-package edu.zut.cs.express.admin.service;
+package edu.zut.cs.express.manager.service;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import edu.zut.cs.express.admin.service.GroupManager;
+import edu.zut.cs.express.admin.service.RoleManager;
+import edu.zut.cs.express.admin.service.UserManager;
 import edu.zut.cs.express.base.service.GenericGenerator;
 import edu.zut.cs.express.manager.domain.Group;
 import edu.zut.cs.express.manager.domain.user;

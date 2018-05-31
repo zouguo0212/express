@@ -1,4 +1,4 @@
-package edu.zut.cs.express.manager.domain;
+package edu.zut.cs.express.customer.domain;
 
 
 import javax.persistence.Column;
@@ -9,6 +9,8 @@ import javax.persistence.Table;
 
 import edu.zut.cs.express.base.domain.BaseEntity;
 import edu.zut.cs.express.manager.domain.Group;
+import edu.zut.cs.express.manager.domain.Manger;
+import edu.zut.cs.express.manager.domain.user;
 
 @Table(name = "T_ADMIN_Pay")
 @Entity

@@ -1,4 +1,4 @@
-package edu.zut.cs.express.manager.domain;
+package edu.zut.cs.express.customer.domain;
 
 
 import javax.persistence.Column;
@@ -12,7 +12,7 @@ import edu.zut.cs.express.manager.domain.Group;
 
 @Table(name = "T_ADMIN_USER")
 @Entity
-public class user_register extends BaseEntity {
+public class User_use extends BaseEntity {
 
 	/**
 	 * 
@@ -28,12 +28,19 @@ public class user_register extends BaseEntity {
 	@Column(name = "EMAIL")
 	String email;
 	
-	@Column(name = "SEX")
-	String sex;
+	@Column(name = "TIME")
+	String time;
 	
-	@Column(name = "PHONE")
-	String phone;
+	@Column(name = "KIND")
+	String kind;
+
+	@Column(name = "EXPRESS_NUMBER")
+	String express_number;
 	
+	@Column(name ="EXPRESS_PHONE")
+	String express_phone;
+	
+
 	public Group getGroup() {
 		return group;
 	}
@@ -69,18 +76,34 @@ public class user_register extends BaseEntity {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getSex() {
-		return sex;
+	public String getTime() {
+		return time;
 	}
 
-	public void setSex(String sex) {
-		this.sex = sex;
+	public void setTime(String time) {
+		this.time = time;
 	}
-	public String getPhone() {
-		return phone;
+	public String getKind() {
+		return kind;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setKind(String kind) {
+		this.kind = kind;
 	}
+	public String getExpress_number() {
+		return express_number;
+	}
+
+	public void setExpress_number(String express_number) {
+		this.express_number = express_number;
+	}
+
+	public String getExpress_phone() {
+		return express_phone;
+	}
+
+	public void setExpress_phone(String express_phone) {
+		this.express_phone = express_phone;
+	}
+	
 }

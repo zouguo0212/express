@@ -1,7 +1,7 @@
-package edu.zut.cs.express.manager.dao;
+package edu.zut.cs.express.customer.dao;
 
 import edu.zut.cs.express.base.dao.GenericDao;
-import edu.zut.cs.express.manager.domain.user_order;
+import edu.zut.cs.express.customer.domain.user_order;
 
 public interface user_orderDAO extends GenericDao<user_order, Long> {
 }
