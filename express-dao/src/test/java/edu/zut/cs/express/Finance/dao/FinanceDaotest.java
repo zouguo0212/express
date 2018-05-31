@@ -3,13 +3,13 @@ package edu.zut.cs.express.Finance.dao;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import edu.zut.cs.express.Finance.daomain.FinanceTest;
+import edu.zut.cs.express.Finance.daomain.Finance;
 import edu.zut.cs.express.base.dao.GenericDaoTestCase;
 
-public class FinanceTestDaotest extends GenericDaoTestCase<Long,FinanceTest,FinanceTestDao>{
+public class FinanceDaotest extends GenericDaoTestCase<Long,Finance,FinanceDao>{
 	
 	@Autowired
-	FinanceTestDao financeTestDao;
+	FinanceDao financeDao;
 	
 	@Test
 	public void test() {
