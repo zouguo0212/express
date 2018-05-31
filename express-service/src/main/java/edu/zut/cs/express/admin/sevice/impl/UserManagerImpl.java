@@ -3,10 +3,10 @@ package edu.zut.cs.express.admin.sevice.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import edu.zut.cs.express.admin.dao.userdao;
-import edu.zut.cs.express.admin.domain.user;
 import edu.zut.cs.express.admin.service.UserManager;
 import edu.zut.cs.express.base.service.impl.GenericManagerImpl;
+import edu.zut.cs.express.manager.dao.userdao;
+import edu.zut.cs.express.manager.domain.user;
 
 @Component
 public class UserManagerImpl extends GenericManagerImpl<user, Long> implements UserManager {
