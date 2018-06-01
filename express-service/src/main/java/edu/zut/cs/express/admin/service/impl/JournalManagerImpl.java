@@ -24,13 +24,13 @@ public class JournalManagerImpl extends GenericManagerImpl<Journal, Long> implem
 	}
 
 	@Override
-	public List<Journal> FindAll(String userId) {
+	public List<Journal> findbyID(String userId) {
 		// 创建查询条件数据对象
 		Journal queryObject = new Journal();
 		queryObject.setUserId(userId);
 		// 创建匹配器，即如何使用查询条件
 		ExampleMatcher matcher = ExampleMatcher.matching() // 构建对象
-				.withMatcher("fullall", GenericPropertyMatchers.startsWith()) // 姓名采用“开始匹配”的方式查询
+				.withMatcher("userId", GenericPropertyMatchers.startsWith()) // 姓名采用“开始匹配”的方式查询
 				.withIgnorePaths("dateCreated", "dateModified"); // 忽略属性：是否关注。因为是基本类型，需要忽略掉
 		// 创建实例并查询
 		Example<Journal> ex = Example.of(queryObject, matcher);

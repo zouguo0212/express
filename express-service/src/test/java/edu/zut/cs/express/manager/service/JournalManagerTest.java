@@ -37,7 +37,7 @@ public class JournalManagerTest extends GenericManagerTestCase<Long, Journal, Jo
 
 	@Test
 	public void testFindByFullname() {
-		List<Journal> result = this.journalManager.FindAll("张");
+		List<Journal> result = this.journalManager.findbyID("张");
 		assertNotNull(result);
 		assertEquals(1, result.size());
 		assertEquals("张三", result.get(0).getUserId());

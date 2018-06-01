@@ -7,5 +7,6 @@ import edu.zut.cs.express.manager.domain.Journal;
 
 public interface JournalManager extends GenericManager<Journal, Long> {
 	
-	List<Journal> FindAll(String userId);
+	List<Journal> findbyID(String userId);
+	
 }
