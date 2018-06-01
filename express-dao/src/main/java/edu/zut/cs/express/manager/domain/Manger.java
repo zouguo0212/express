@@ -3,12 +3,9 @@ package edu.zut.cs.express.manager.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import edu.zut.cs.express.base.domain.BaseEntity;
-import edu.zut.cs.express.manager.domain.Group;
 
 @Table(name = "MANGER")
 @Entity
