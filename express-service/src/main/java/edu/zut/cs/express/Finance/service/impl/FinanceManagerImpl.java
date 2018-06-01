@@ -60,8 +60,4 @@ public class FinanceManagerImpl extends GenericManagerImpl<Finance,Long> impleme
 	}
 
 	
-	
-
-	
-	
 }
