@@ -44,7 +44,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'finance.StudentModel',
+			model : 'finance.FinanceModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
