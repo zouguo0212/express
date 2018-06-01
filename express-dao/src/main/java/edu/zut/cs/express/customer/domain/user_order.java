@@ -1,4 +1,4 @@
-package edu.zut.cs.express.manager.domain;
+package edu.zut.cs.express.customer.domain;
 
 
 import javax.persistence.Column;
