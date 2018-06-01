@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>express</title>
+<title>Express</title>
 </head>
 <link rel="stylesheet" type="text/css"
 	href="<%=extjsPath%>resources/css/ext-all-neptune.css">
@@ -23,7 +23,7 @@
 	var server_context = basePath;
 </script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/resources/js/journal/app.js"></script>
+	src="${pageContext.request.contextPath}/resources/js/Journal/app.js"></script>
 <body>
 </body>
 </html>

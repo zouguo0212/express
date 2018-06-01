@@ -5,15 +5,15 @@ var studentStore = Ext.create('journal.store.JournalStore');
 Ext.define('journal.view.JournalGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.journalGrid',
-	title : 'Express - 日志信息表',
-	store : financeStore,
+	title : 'Express - 财务信息表',
+	store : journalStore,
 	columns : [ {
 		text : 'ID',
 		width : 50,
 		sortable : true,
-		dataIndex : 'ID'
+		dataIndex : 'id'
 	}, {
-		text : "编号",
+		text : "工号",
 		width : 120,
 		sortable : true,
 		dataIndex : 'logId'
@@ -32,7 +32,7 @@ Ext.define('journal.view.JournalGrid', {
 		width : 80,
 		sortable : true,
 		dataIndex : 'operate'
-	},  {
+	},{
 		text : "添加时间",
 		width : 150,
 		dataIndex : 'dateCreated',
