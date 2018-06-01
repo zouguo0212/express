@@ -1,30 +1,26 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('finance.FinanceModel', {
+Ext.define('journal.JournalModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
 						type : 'int',
 						sortable : true
 					}, {
-						name : 'idnum',
+						name : 'logId',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'name',
+						name : 'userId',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'sex',
+						name : 'moduleName',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'age',
-						type : 'int',
-						sortable : true
-					}, {
-						name : 'money',
-						type : 'double',
+						name : 'operate',
+						type : 'string',
 						sortable : true
 					}, {
 						name : 'dateCreated',
@@ -44,7 +40,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'finance.FinanceModel',
+			model : 'journal.JournalModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -116,8 +112,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var financeGrid = new Ext.grid.GridPanel({
-			id : 'studentGrid',
+var journalGrid = new Ext.grid.GridPanel({
+			id : 'journalGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -125,17 +121,17 @@ var financeGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '财务信息列表',
+			title : '日志列表',
 			columns : [{
 						text : 'ID',
 						width : 50,
 						sortable : true,
 						dataIndex : 'id'
 					}, {
-						text : "工号",
+						text : "编号",
 						width : 120,
 						sortable : true,
-						dataIndex : 'idnum',
+						dataIndex : 'logId',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
@@ -144,29 +140,23 @@ var financeGrid = new Ext.grid.GridPanel({
 						text : "姓名",
 						width : 80,
 						sortable : true,
-						dataIndex : 'name',
+						dataIndex : 'userId',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
 						}
 					}, {
-						text : "性别",
+						text : "模块",
 						width : 50,
 						sortable : true,
-						dataIndex : 'sex',
+						dataIndex : 'moduleName',
 						editor : genderFieldEditor
 					}, {
-						text : "年龄",
+						text : "操作",
 						width : 50,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'age'
-					}, {
-						text : "金额",
-						width : 80,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'money'
+						dataIndex : 'operate'
 					}, {
 						text : "添加时间",
 						width : 150,
@@ -206,9 +196,9 @@ var financeGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-financeGrid.getSelectionModel().on('selectionchange',
+journalGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-	          financeGrid.down('#delete').setDisabled(selections.length === 0);
+	          journalGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -221,13 +211,13 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	financeForm.getForm().reset();
+	journalForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var financeForm = new Ext.form.FormPanel({
+var journalForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,
@@ -236,17 +226,17 @@ var financeForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "工号",
+						fieldLabel : "编号",
 						xtype : 'textfield',
-						name : 'idnum'
+						name : 'logId'
 					}, {
 						fieldLabel : "姓名",
 						xtype : 'textfield',
-						name : 'name'
+						name : 'userId'
 					}, {
-						fieldLabel : "性别",
+						fieldLabel : "模块",
 						xtype : 'textfield',
-						name : 'sex'
+						name : 'moduleName'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -262,11 +252,11 @@ var financeForm = new Ext.form.FormPanel({
 		})
 
 Ext.application({
-			name : '财务信息',
+			name : '日志信息',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [financeForm, studentGrid]
+							items : [journalForm, journalGrid]
 						});
 			}
 		});
