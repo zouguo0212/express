@@ -121,14 +121,14 @@ var journalGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '员工日志列表',
+			title : '日志列表',
 			columns : [{
 						text : 'ID',
 						width : 50,
 						sortable : true,
 						dataIndex : 'id'
 					}, {
-						text : "日志id",
+						text : "编号",
 						width : 120,
 						sortable : true,
 						dataIndex : 'logId',
@@ -137,7 +137,7 @@ var journalGrid = new Ext.grid.GridPanel({
 							xtype : 'textfield'
 						}
 					}, {
-						text : "用户id",
+						text : "姓名",
 						width : 80,
 						sortable : true,
 						dataIndex : 'userId',
@@ -198,7 +198,7 @@ var journalGrid = new Ext.grid.GridPanel({
 
 journalGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			journalGrid.down('#delete').setDisabled(selections.length === 0);
+	          journalGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -226,11 +226,11 @@ var journalForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "日志id",
+						fieldLabel : "编号",
 						xtype : 'textfield',
 						name : 'logId'
 					}, {
-						fieldLabel : "用户id",
+						fieldLabel : "姓名",
 						xtype : 'textfield',
 						name : 'userId'
 					}, {

@@ -1,4 +1,4 @@
-package edu.zut.cs.express.admin.service;
+package edu.zut.cs.express.manager.service;
 
 import java.util.List;
 
