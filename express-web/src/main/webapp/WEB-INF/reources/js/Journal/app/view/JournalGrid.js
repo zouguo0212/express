@@ -11,7 +11,7 @@ Ext.define('journal.view.JournalGrid', {
 		text : 'ID',
 		width : 50,
 		sortable : true,
-		dataIndex : 'id'
+		dataIndex : 'ID'
 	}, {
 		text : "编号",
 		width : 120,

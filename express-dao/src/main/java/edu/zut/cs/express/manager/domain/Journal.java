@@ -13,16 +13,16 @@ public class Journal extends BaseEntity{
 	 * 
 	 */
 	private static final long serialVersionUID = -4376674977047164142L;
-	@Column(name = "JID")
+	@Column
 	/**日志id*/
     String logId;
-	@Column(name = "UID")
+	@Column
     /**用户id*/
     String userId;
-	@Column(name = "MNAME")
+	@Column
     /**模块名称*/
     String moduleName;
-	@Column(name = "OPERATE")
+	@Column
     /**操作*/
     String operate;
 	
