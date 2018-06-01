@@ -2,7 +2,7 @@ Ext.define('journal.model.JournalModel', {
 	extend : 'Ext.data.Model',
 	alias : 'widget.journalModel',
 	fields : [ {
-		name : 'id',
+		name : 'ID',
 		type : 'int',
 		sortable : true
 	}, {
