@@ -125,17 +125,17 @@ var financeGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '学生基本信息列表',
+			title : '财务信息列表',
 			columns : [{
 						text : 'ID',
 						width : 50,
 						sortable : true,
 						dataIndex : 'id'
 					}, {
-						text : "学号",
+						text : "工号",
 						width : 120,
 						sortable : true,
-						dataIndex : 'code',
+						dataIndex : 'idnum',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
@@ -144,7 +144,7 @@ var financeGrid = new Ext.grid.GridPanel({
 						text : "姓名",
 						width : 80,
 						sortable : true,
-						dataIndex : 'fullName',
+						dataIndex : 'name',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
@@ -153,20 +153,20 @@ var financeGrid = new Ext.grid.GridPanel({
 						text : "性别",
 						width : 50,
 						sortable : true,
-						dataIndex : 'gender',
+						dataIndex : 'sex',
 						editor : genderFieldEditor
 					}, {
-						text : "年级",
+						text : "年龄",
 						width : 50,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'grade'
+						dataIndex : 'age'
 					}, {
-						text : "班级",
+						text : "金额",
 						width : 80,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'clazz'
+						dataIndex : 'money'
 					}, {
 						text : "添加时间",
 						width : 150,
