@@ -1,4 +1,4 @@
-package edu.zut.cs.express.customer.domain;
+package edu.zut.cs.express.User_order.domain;
 
 
 import javax.persistence.Column;
@@ -9,33 +9,34 @@ import javax.persistence.Table;
 
 import edu.zut.cs.express.base.domain.BaseEntity;
 
-@Table(name = "T_ADMIN_USER")
+@Table(name = "T_USER_ORDER")
 @Entity
-public class user_order extends BaseEntity {
+public class User_order extends BaseEntity {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -4376674977047164142L;
 
-	@Column(name = "USERNAME")
+	@Column
 	String username;
 
-	@Column(name = "PASSWORD")
+	@Column
 	String password;
 
-	@Column(name = "EMAIL")
+	@Column
 	String email;
 	
-	@Column(name = "TIME")
+	@Column
 	String time;
 	
-	@Column(name = "KIND")
+	@Column
 	String kind;
 
-	@Column(name = "EXPRESS_NUMBER")
+	@Column
 	String express_number;
 	
+
 	public String getUsername() {
 		return username;
 	}
