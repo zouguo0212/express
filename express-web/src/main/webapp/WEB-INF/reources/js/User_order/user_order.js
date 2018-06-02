@@ -1,32 +1,36 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('finance.FinanceModel', {
+Ext.define('user_order.User_orderModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
 						type : 'int',
 						sortable : true
-					}, {
-						name : 'idnum',
+					},{
+						name : 'username',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'name',
+						name : 'time',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'sex',
+						name : 'password',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'age',
-						type : 'int',
+						name : 'kind',
+						type : 'string',
 						sortable : true
 					}, {
-						name : 'money',
-						type : 'double',
+						name : 'express_number',
+						type : 'string',
 						sortable : true
 					}, {
+						name : 'email',
+						type : 'string',
+						sortable : true
+					},{
 						name : 'dateCreated',
 						type : 'date',
 						dateFormat : 'time',
@@ -44,7 +48,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'finance.FinanceModel',
+			model : 'user_order.User_orderModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -117,7 +121,7 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 		});
 
 var financeGrid = new Ext.grid.GridPanel({
-			id : 'studentGrid',
+			id : 'user_orderGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -125,17 +129,17 @@ var financeGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '财务信息列表',
+			title : '订单信息列表',
 			columns : [{
 						text : 'ID',
 						width : 50,
 						sortable : true,
 						dataIndex : 'id'
 					}, {
-						text : "工号",
+						text : "时间",
 						width : 120,
 						sortable : true,
-						dataIndex : 'idnum',
+						dataIndex : 'time',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
@@ -144,29 +148,35 @@ var financeGrid = new Ext.grid.GridPanel({
 						text : "姓名",
 						width : 80,
 						sortable : true,
-						dataIndex : 'name',
+						dataIndex : 'username',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
 						}
 					}, {
-						text : "性别",
+						text : "密码",
 						width : 50,
 						sortable : true,
-						dataIndex : 'sex',
+						dataIndex : 'password',
 						editor : genderFieldEditor
 					}, {
-						text : "年龄",
+						text : "类别",
 						width : 50,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'age'
+						dataIndex : 'kind'
 					}, {
-						text : "金额",
+						text : "快递单号",
 						width : 80,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'money'
+						dataIndex : 'express_number'
+					}, {
+						text : "电子邮箱",
+						width : 80,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'email'
 					}, {
 						text : "添加时间",
 						width : 150,
@@ -236,17 +246,17 @@ var financeForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "工号",
+						fieldLabel : "时间",
 						xtype : 'textfield',
-						name : 'idnum'
+						name : 'time'
 					}, {
 						fieldLabel : "姓名",
 						xtype : 'textfield',
-						name : 'name'
+						name : 'username'
 					}, {
-						fieldLabel : "性别",
+						fieldLabel : "快递单号",
 						xtype : 'textfield',
-						name : 'sex'
+						name : 'express_number'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -262,11 +272,11 @@ var financeForm = new Ext.form.FormPanel({
 		})
 
 Ext.application({
-			name : '财务信息',
+			name : '订单信息',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [financeForm, studentGrid]
+							items : [user_orderForm, user_orderGrid]
 						});
 			}
 		});
