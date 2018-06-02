@@ -24,7 +24,7 @@ public abstract class GenericManagerTestCase<PK extends Serializable, T extends 
 		extends BaseAbstractTestCase {
 
 	protected T entity;
-
+	
 	protected List<T> list;
 
 	/**
@@ -47,11 +47,16 @@ public abstract class GenericManagerTestCase<PK extends Serializable, T extends 
 	}
 
 	@Test
-	public void testSave() {
+	public void testCRUD() {
 		if (this.entity == null) {
 			try {
 				this.entity = this.persistentClass.getDeclaredConstructor().newInstance();
-				this.entity = this.manager.save(this.entity);
+				T newEntity = this.manager.save(this.entity);
+				@SuppressWarnings("unchecked")
+				PK entity_id = (PK) newEntity.getId();
+				T foundEntity = this.manager.findById(entity_id);
+				assertEquals(newEntity, foundEntity);
+
 			} catch (InstantiationException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -73,6 +78,11 @@ public abstract class GenericManagerTestCase<PK extends Serializable, T extends 
 			}
 		}
 
+	}
+
+	private void assertEquals(T newEntity, T foundEntity) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
