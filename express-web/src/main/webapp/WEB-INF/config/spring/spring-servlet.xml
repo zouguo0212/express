@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:p="http://www.springframework.org/schema/p" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns="http://www.springframework.org/schema/beans"
 	xsi:schemaLocation="
 	http://www.springframework.org/schema/mvc   
 	http://www.springframework.org/schema/mvc/spring-mvc.xsd   
@@ -12,7 +14,8 @@
 
 	<mvc:annotation-driven>
 		<mvc:message-converters>
-			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+			<bean
+				class="org.springframework.http.converter.StringHttpMessageConverter">
 				<property name="supportedMediaTypes">
 					<list>
 						<value>text/plain; charset=UTF-8</value>
@@ -33,7 +36,8 @@
 	</mvc:annotation-driven>
 
 	<!-- 自动搜索@Controller标注的类 -->
-	<context:component-scan base-package="edu.zut.cs.express.**.controller" />
+	<context:component-scan
+		base-package="edu.zut.cs.express.**.controller" />
 
 	<bean
 		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
@@ -47,21 +51,24 @@
 			<map>
 				<entry key="html" value="text/html;charset=UTF-8" />
 				<entry key="json" value="application/json;charset=UTF-8" />
-				<entry key="jsonp" value="application/javascript;charset=UTF-8" />
+				<entry key="jsonp"
+					value="application/javascript;charset=UTF-8" />
 			</map>
 		</property>
 	</bean>
 
 	<bean
 		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
-		<property name="contentNegotiationManager" ref="contentNegotiationManager" />
+		<property name="contentNegotiationManager"
+			ref="contentNegotiationManager" />
 		<property name="viewResolvers">
 			<list>
 				<bean id="viewResolver"
 					class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 					p:viewClass="org.springframework.web.servlet.view.JstlView"
-					p:prefix="/WEB-INF/pages/" p:suffix=".jsp" p:cacheUnresolved="false"
-					p:exposedContextBeanNames="webProperties" p:order="1" />
+					p:prefix="/WEB-INF/pages/" p:suffix=".jsp"
+					p:cacheUnresolved="false" p:exposedContextBeanNames="webProperties"
+					p:order="1" />
 			</list>
 		</property>
 		<property name="defaultViews">
@@ -74,9 +81,12 @@
 		</property>
 	</bean>
 
-	<mvc:resources mapping="/js/**" location="/WEB-INF/resources/js/" />
-	<mvc:resources mapping="/style/**" location="/WEB-INF/resources/style/" />
-	<mvc:resources mapping="/images/**" location="/WEB-INF/resources/images/" />
+	<mvc:resources mapping="/js/**"
+		location="/WEB-INF/resources/js/" />
+	<mvc:resources mapping="/style/**"
+		location="/WEB-INF/resources/style/" />
+	<mvc:resources mapping="/images/**"
+		location="/WEB-INF/resources/images/" />
 
 	<bean id="messageSource"
 		class="org.springframework.context.support.ResourceBundleMessageSource"
@@ -86,7 +96,8 @@
 	<bean id="exceptionResolver"
 		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
 		<!-- to /commons/error.jsp -->
-		<property name="defaultErrorView" value="/WEB-INF/pages/commons/error" />
+		<property name="defaultErrorView"
+			value="/WEB-INF/pages/commons/error" />
 		<property name="exceptionMappings">
 			<props>
 			</props>
