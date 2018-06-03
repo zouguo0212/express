@@ -33,12 +33,12 @@ protected int pageSize = 20;
 @RequestMapping(value = "/", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
 @ResponseBody
 public T create(@RequestBody T model) {
-this.model = model;
-Date date = new Date();
-this.model.setDateCreated(date);
-this.model.setDateModified(date);
-this.model = this.manager.save(this.model);
-return this.model;
+	this.model = model;
+	Date date = new Date();
+	this.model.setDateCreated(date);
+	this.model.setDateModified(date);
+	this.model = this.manager.save(this.model);
+	return this.model;
 }
 
 /**
@@ -81,7 +81,8 @@ return this.page;
 @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
 @ResponseBody
 public T getOne(@PathVariable PK id) {
-return this.manager.findById(id);
+	
+	return this.manager.findById(id);
 
 }
 
