@@ -6,7 +6,7 @@ Ext.define('userorder.UserorderModel', {
 						name : 'id',
 						type : 'int',
 						sortable : true
-					},{
+					}, {
 						name : 'name',
 						type : 'string',
 						sortable : true
@@ -19,14 +19,14 @@ Ext.define('userorder.UserorderModel', {
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'express_num',
+						name : 'expnum',
 						type : 'string',
 						sortable : true
 					}, {
 						name : 'email',
 						type : 'string',
 						sortable : true
-					},{
+					}, {
 						name : 'dateCreated',
 						type : 'date',
 						dateFormat : 'time',
@@ -160,7 +160,7 @@ var userorderGrid = new Ext.grid.GridPanel({
 						width : 80,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'express_num'
+						dataIndex : 'expnum'
 					}, {
 						text : "电子邮箱",
 						width : 80,
@@ -246,7 +246,7 @@ var userorderForm = new Ext.form.FormPanel({
 					}, {
 						fieldLabel : "快递单号",
 						xtype : 'textfield',
-						name : 'express_num'
+						name : 'expnum'
 					}],
 			buttons : [{
 						xtype : 'button',

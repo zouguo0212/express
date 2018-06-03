@@ -28,7 +28,7 @@ public class Userorder extends BaseEntity {
 	String kind;
 
 	@Column
-	String express_num;
+	String expnum;
 	
 
 	public String getUsername() {
@@ -60,12 +60,12 @@ public class Userorder extends BaseEntity {
 	public void setKind(String kind) {
 		this.kind = kind;
 	}
-	public String getExpress_num() {
-		return express_num;
+	public String getexpnum() {
+		return expnum;
 	}
 
-	public void setExpress_number(String express_num) {
-		this.express_num = express_num;
+	public void setExpnum(String expnum) {
+		this.expnum = expnum;
 	}
 
 }

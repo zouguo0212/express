@@ -2,6 +2,7 @@ package edu.zut.cs.express.Userorder.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers;
@@ -18,6 +19,7 @@ public class UserorderManagerImpl extends GenericManagerImpl<Userorder, Long> im
 
 	UserorderDao userorderDao;
 	
+	@Autowired
 	public void setUserorderDao(UserorderDao userorderDao) {
 		this.userorderDao = userorderDao;
 		this.dao = this.userorderDao;

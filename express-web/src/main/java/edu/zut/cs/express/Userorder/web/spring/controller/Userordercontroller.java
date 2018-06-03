@@ -21,4 +21,5 @@ public class Userordercontroller extends GenericController<Userorder, Long, User
 		this.manager = this.userorderManager;
 	}
 	
+	
 }

@@ -24,7 +24,7 @@ Ext.define('userorder.view.UserorderEdit', {
 				fieldLabel : '类别'
 			}, {
 				xtype : 'textfield',
-				name : 'express_num',
+				name : 'expnum',
 				fieldLabel : '单号'
 			}, {
 				xtype : 'textfield',

@@ -31,7 +31,7 @@ Ext.define('userorder.view.UserorderGrid', {
 		text : "快递号",
 		width : 120,
 		sortable : true,
-		dataIndex : 'express_num'
+		dataIndex : 'expnum'
 	}, {
 		text : "电子邮箱",
 		width : 80,

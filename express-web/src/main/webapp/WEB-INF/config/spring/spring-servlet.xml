@@ -53,10 +53,16 @@
 				<entry key="json" value="application/json;charset=UTF-8" />
 				<entry key="jsonp"
 					value="application/javascript;charset=UTF-8" />
+				<entry key="xml" value="application/xml" />
+				<entry key="pdf" value="application/pdf" />
 			</map>
 		</property>
 	</bean>
 
+ <!-- 通过order属性来定义视图解析器的优先级，order的值越小优先级越低 -->
+    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+        <property name="order" value="0"></property>
+    </bean>
 	<bean
 		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
 		<property name="contentNegotiationManager"
