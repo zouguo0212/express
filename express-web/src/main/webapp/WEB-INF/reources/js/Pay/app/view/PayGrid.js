@@ -48,7 +48,7 @@ Ext.define('pay.view.PayStore', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : studentStore,
+		store : payStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',

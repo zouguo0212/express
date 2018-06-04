@@ -8,10 +8,9 @@ import edu.zut.cs.express.base.web.spring.controller.GenericController;
 import edu.zut.cs.express.customer.domain.Pay;
 import edu.zut.cs.express.customer.service.PayManager;
 
-public class PayController {
 	@Controller
 	@RequestMapping("/Pay")
-	public class StudentController extends GenericController<Pay, Long, PayManager> {
+	public class Paycontroller extends GenericController<Pay, Long, PayManager> {
 
 	    PayManager payManager;
 
@@ -21,5 +20,4 @@ public class PayController {
 	        this.manager = this.payManager;
 	    }
 
-	}
 	}
