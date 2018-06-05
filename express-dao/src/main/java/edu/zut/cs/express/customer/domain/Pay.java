@@ -22,10 +22,6 @@ public class Pay extends BaseEntity {
 		return idnum;
 	}
 
-	public void setIdnum(String idnum) {
-		this.idnum = idnum;
-	}
-
 	@Column
 	String user_name;
 	@Column
@@ -37,9 +33,6 @@ public class Pay extends BaseEntity {
 		return user_name;
 	}
 
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
-	}
 
 	public int getUser_money() {
 		return user_money;
