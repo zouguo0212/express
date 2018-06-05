@@ -18,6 +18,16 @@ public class Pay extends BaseEntity {
 	@Column
 	String idnum;
 
+	public void setIdnum(String idnum) {
+		this.idnum = idnum;
+	}
+
+
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
+	}
+
+
 	public String getIdnum() {
 		return idnum;
 	}
