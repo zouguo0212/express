@@ -5,7 +5,7 @@ var studentStore = Ext.create('ujournal.store.UJournalStore');
 Ext.define('ujournal.view.UJournalGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.ujournalGrid',
-	title : 'Express - 财务信息表',
+	title : 'Express - 用户日志表',
 	store : ujournalStore,
 	columns : [ {
 		text : 'ID',
