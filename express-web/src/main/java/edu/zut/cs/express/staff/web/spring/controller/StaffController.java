@@ -7,16 +7,8 @@ import edu.zut.cs.express.base.web.spring.controller.GenericController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-
-
-/*@Controller
-=======
-/*
-=======
 /*import org.springframework.web.bind.annotation.RequestMethod;
 */
-
 @Controller
 @RequestMapping("/staff")
 public class StaffController extends GenericController<Staff, Long, StaffManager> {
