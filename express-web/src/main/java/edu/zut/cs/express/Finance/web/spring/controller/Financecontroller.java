@@ -16,6 +16,7 @@ public class Financecontroller extends GenericController<Finance, Long, FinanceM
 	
 	@Autowired
 	public void setFinanceManager(FinanceManager financeManager) {
+		
 		this.financeManager = financeManager;
 		this.manager = this.financeManager;
 	}

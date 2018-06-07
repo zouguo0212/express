@@ -1,18 +1,12 @@
 package edu.zut.cs.express.customer.domain;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import edu.zut.cs.express.base.domain.BaseEntity;
-import edu.zut.cs.express.manager.domain.Group;
-import edu.zut.cs.express.manager.domain.Manger;
-import edu.zut.cs.express.manager.domain.user;
 
-@Table(name = "T_ADMIN_Pay")
+@Table(name = "T_Customer_Pay")
 @Entity
 public class Pay extends BaseEntity {
 
@@ -21,39 +15,49 @@ public class Pay extends BaseEntity {
 	 */
 	private static final long serialVersionUID = -4376674977047164142L;
 
-	@Column(name = "user")
-	user use;
-	@Column(name = "manger")
-	Manger manger;
+	@Column
+	String idnum;
 
-	public Group getGroup() {
-		return group;
+	public void setIdnum(String idnum) {
+		this.idnum = idnum;
 	}
 
-	public void setGroup(Group group) {
-		this.group = group;
-	}
-	
-	@ManyToOne
-	@JoinColumn(name = "GROUP_ID")
-	Group group;
 
-
-	public user getUse() {
-		return use;
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
 	}
 
-	public void setUse(user use) {
-		this.use = use;
+
+	public String getIdnum() {
+		return idnum;
 	}
 
-	public Manger getManger() {
-		return manger;
+	@Column
+	String user_name;
+	@Column
+	int user_money;
+	@Column
+	int manger_money;
+
+	public String getUser_name() {
+		return user_name;
 	}
 
-	public void setManger(Manger manger) {
-		this.manger = manger;
+
+	public int getUser_money() {
+		return user_money;
+	}
+
+	public void setUser_money(int user_money) {
+		this.user_money = user_money;
+	}
+
+	public int getManger_money() {
+		return manger_money;
+	}
+
+	public void setManger_money(int manger_money) {
+		this.manger_money = manger_money;
 	}
 
 }
-
