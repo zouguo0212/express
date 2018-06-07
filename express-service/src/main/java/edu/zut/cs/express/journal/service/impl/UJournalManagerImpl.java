@@ -17,12 +17,12 @@ import edu.zut.cs.express.base.service.impl.GenericManagerImpl;
 @Component
 public class UJournalManagerImpl extends GenericManagerImpl<UJournal,Long> implements UJournalManager{
 
-	UJournalDao journalDao;
+	UJournalDao ujournalDao;
 	
 	@Autowired
-	public void setDinanceDao(UJournalDao journalDao) {
-		this.journalDao = journalDao;
-		this.dao = this.journalDao;
+	public void setDinanceDao(UJournalDao ujournalDao) {
+		this.ujournalDao = ujournalDao;
+		this.dao = this.ujournalDao;
 	}
 	
 	@Override
