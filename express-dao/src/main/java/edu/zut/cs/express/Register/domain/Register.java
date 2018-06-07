@@ -1,5 +1,4 @@
-package edu.zut.cs.express.customer.domain;
-
+package edu.zut.cs.express.Register.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,15 +8,18 @@ import javax.persistence.Table;
 
 import edu.zut.cs.express.base.domain.BaseEntity;
 
-@Table(name = "Register")
+@Table(name = "t_Register")
 @Entity
-public class user_register extends BaseEntity {
+public class Register extends BaseEntity {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -4376674977047164142L;
 
+	@Column(name = "IDNUM")
+	String idnum;
+	
 	@Column(name = "USERNAME")
 	String username;
 
@@ -34,6 +36,14 @@ public class user_register extends BaseEntity {
 	String phone;
 	
 
+	public String getIdnum() {
+		return idnum;
+	}
+
+	public void setIdnum(String idnum) {
+		this.idnum = idnum;
+	}
+	
 	public String getUsername() {
 		return username;
 	}
