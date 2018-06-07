@@ -1,6 +1,6 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('journal.JournalModel', {
+Ext.define('ujournal.UJournalModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
