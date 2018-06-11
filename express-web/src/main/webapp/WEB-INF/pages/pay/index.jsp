@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Express</title>
+<title>Java EE支付模块</title>
 </head>
 <link rel="stylesheet" type="text/css"
 	href="<%=extjsPath%>resources/css/ext-all-neptune.css">
@@ -22,7 +22,7 @@
 	var server_context = basePath;
 </script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/resources/js/Pay/app.js"></script>
+	src="${pageContext.request.contextPath}/resources/js/pay/app.js"></script>
 <body>
 </body>
 </html>

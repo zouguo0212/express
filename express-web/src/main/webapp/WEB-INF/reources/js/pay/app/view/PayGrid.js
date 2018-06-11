@@ -2,7 +2,7 @@ var pageSize = 20;
 
 var studentStore = Ext.create('pay.store.PayStore');
 
-Ext.define('pay.view.PayStore', {
+Ext.define('pay.view.PayGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.payGrid',
 	title : 'Express - 支付信息表',
