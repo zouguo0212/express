@@ -1,40 +1,50 @@
 var pageSize = 20;
 
-var loginStore = Ext.create('login.store.LoginStore');
+var registerStore = Ext.create('register.store.RegisterStore');
 
-Ext.define('login.view.LoginGrid', {
+Ext.define('register.view.RegisterGrid', {
 	extend : 'Ext.grid.GridPanel',
-	alias : 'widget.loginGrid',
-	title : 'Express - 用戶信息表',
-	store : loginStore,
+	alias : 'widget.registerGrid',
+	title : 'Express - 订单信息表',
+	store : registerStore,
 	columns : [ {
 		text : 'ID',
 		width : 50,
 		sortable : true,
-		dataIndex : 'id'
+		dataIndex : 'ID'
 	}, {
-		text : "用戶賬號",
-		width : 120,
-		sortable : true,
-		dataIndex : 'userid'
-	}, {
-		text : "姓名",
+		text : "username",
 		width : 80,
 		sortable : true,
 		dataIndex : 'username'
+	},{
+		text : "idnum",
+		width : 80,
+		sortable : true,
+		dataIndex : 'idnum'
 	}, {
-		text : "性别",
+		text : "email",
+		width : 80,
+		sortable : true,
+		dataIndex : 'email'
+	}, {
+		text : "sex",
 		width : 80,
 		sortable : true,
 		dataIndex : 'sex'
-	},  {
-		text : "添加时间",
+	}, {
+		text : "phone",
+		width : 120,
+		sortable : true,
+		dataIndex : 'phone'
+	}, {
+		text : "DATECREATED",
 		width : 150,
 		dataIndex : 'dateCreated',
 		renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
 		sortable : true
 	}, {
-		text : "修改时间",
+		text : "DATEMODIFIED",
 		width : 150,
 		dataIndex : 'dateModified',
 		renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
@@ -48,7 +58,7 @@ Ext.define('login.view.LoginGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : loginStore,
+		store : registerStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',

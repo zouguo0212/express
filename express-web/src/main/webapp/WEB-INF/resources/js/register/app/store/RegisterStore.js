@@ -1,17 +1,17 @@
 var pageSize = 20;
 
-Ext.define('login.store.LoginStore', {
+Ext.define('register.store.RegisterStore', {
 	extend : 'Ext.data.Store',
-	alias : 'widget.LoginStore',
+	alias : 'widget.RegisterStore',
 	autoLoad : true,
 	autoSync : true,// 需要同步
-	model : 'login.model.LoginModel',
+	model : 'register.model.RegisterModel',
 	proxy : {
-		url : server_context + '/login/login/.json',
+		url : server_context + '/fangye/register/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/login/login/.json',
-			update : server_context + '/login/login/.json'
+			read : server_context + '/fangye/register/.json',
+			update : server_context + '/fangye/register/.json'
 		},
 		reader : {
 			type : 'json',
