@@ -1,6 +1,6 @@
 var pageSize = 20;
 
-var studentStore = Ext.create('pay.store.PayStore');
+var payStore = Ext.create('pay.store.PayStore');
 
 Ext.define('pay.view.PayGrid', {
 	extend : 'Ext.grid.GridPanel',
@@ -11,9 +11,9 @@ Ext.define('pay.view.PayGrid', {
 		text : 'ID',
 		width : 50,
 		sortable : true,
-		dataIndex : 'id'
+		dataIndex : 'idnum'
 	},  {
-		text : "姓名",
+		text : "用户姓名",
 		width : 80,
 		sortable : true,
 		dataIndex : 'user_name'

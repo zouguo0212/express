@@ -1,9 +1,9 @@
 Ext.define('pay.controller.PayController', {
 	extend : 'Ext.app.Controller',
 	alias : 'widget.payController',
-	stores : [ 'payStore' ],
+	stores : [ 'PayStore' ],
 	models : [ 'PayModel' ],
-	views : [ 'PaytGrid', 'PayEdit' ],
+	views : [ 'PayGrid', 'PayEdit' ],
 	init : function() {
 		this.control({
 			'payGrid' : {
