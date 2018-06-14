@@ -15,10 +15,9 @@ public class UJournaldaoTest extends GenericDaoTestCase<Long, UJournal, UJournal
 	UJournalDao ujournaldao;
 
 	@Test
-	public void testFindAll() {
-
-		List<UJournal> result = this.ujournaldao.findAll();
-
+	public void test() {
+		System.out.println("This is Junit Test!");
 	}
+
 
 }
