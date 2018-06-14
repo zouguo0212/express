@@ -1,9 +1,9 @@
-package edu.zut.cs.express.Register.service;
+package edu.zut.cs.express.fangye.service;
 
 import java.util.List;
 
 import edu.zut.cs.express.base.service.GenericManager;
-import edu.zut.cs.express.Register.domain.Register;
+import edu.zut.cs.express.fangye.domain.Register;
 
 public interface RegisterManager extends GenericManager<Register, Long> {
 

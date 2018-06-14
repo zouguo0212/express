@@ -1,4 +1,4 @@
-package edu.zut.cs.express.Register.service;
+package edu.zut.cs.express.fangye.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -10,17 +10,16 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import edu.zut.cs.express.base.service.GenericManagerTestCase;
-import edu.zut.cs.express.Register.domain.Register;
-import edu.zut.cs.express.Register.service.RegisterManager;
+import edu.zut.cs.express.fangye.domain.Register;
 
 public class RegisterManagerTest extends GenericManagerTestCase<Long, Register, RegisterManager> {
 
-	RegisterManager RegisterManager;
+	RegisterManager registerManager;
 
 	@Autowired
-	public void setStudentManager(RegisterManager RegisterManager) {
-		this.RegisterManager = RegisterManager;
-		this.manager = this.RegisterManager;
+	public void setStudentManager(RegisterManager registerManager) {
+		this.registerManager = registerManager;
+		this.manager = this.registerManager;
 	}
 
 	public RegisterManagerTest() {
@@ -29,17 +28,17 @@ public class RegisterManagerTest extends GenericManagerTestCase<Long, Register, 
 
 	@Before
 	public void setUp() throws Exception {
-		Register Register = new Register();
-		Register.setIdnum("4");
-		Register.setUsername("张三");
+		Register register = new Register();
+		register.setIdnum("4");
+		register.setUsername("张三");
 	//	staff.setAge(21);
-		Register.setSex("male");
-		this.entity = this.manager.save(Register);
+		register.setSex("male");
+		this.entity = this.manager.save(register);
 	}
 
 	@Test
 	public void testFindByUsername() {
-		List<Register> result = this.RegisterManager.findByUsername("张");
+		List<Register> result = this.registerManager.findByUsername("张");
 		assertNotNull(result);
 		assertEquals(1, result.size());
 		//assertEquals("张三", result.get(0).getName());
@@ -49,7 +48,7 @@ public class RegisterManagerTest extends GenericManagerTestCase<Long, Register, 
 	@Test
 	public void testFindByIdnum() {
 		String idnum = this.entity.getIdnum();
-		List<Register> result = this.RegisterManager.findByIdnum("idnum");
+		List<Register> result = this.registerManager.findByIdnum("idnum");
 		//System.out.println(result.toString());
 		//assertEquals(idnum, result.get(0).getIDnum());
 	}
