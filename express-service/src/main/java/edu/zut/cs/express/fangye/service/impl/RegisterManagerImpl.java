@@ -1,4 +1,4 @@
-package edu.zut.cs.express.Register.service.impl;
+package edu.zut.cs.express.fangye.service.impl;
 
 import java.util.List;
 
@@ -10,19 +10,19 @@ import org.springframework.data.domain.ExampleMatcher.StringMatcher;
 import org.springframework.stereotype.Component;
 
 import edu.zut.cs.express.base.service.impl.GenericManagerImpl;
-import edu.zut.cs.express.Register.domain.Register;
-import edu.zut.cs.express.Register.dao.RegisterDao;
-import edu.zut.cs.express.Register.service.RegisterManager;
+import edu.zut.cs.express.fangye.domain.Register;
+import edu.zut.cs.express.fangye.dao.RegisterDao;
+import edu.zut.cs.express.fangye.service.RegisterManager;
 
 @Component
 public class RegisterManagerImpl extends GenericManagerImpl<Register, Long> implements RegisterManager {
 
-	RegisterDao RegisterDao;
+	RegisterDao registerDao;
 
 	@Autowired
 	public void setStudentDao(RegisterDao registerDao) {
-		this.RegisterDao = registerDao;
-		this.dao = this.RegisterDao;
+		this.registerDao = registerDao;
+		this.dao = this.registerDao;
 	}
 	
 	@Override

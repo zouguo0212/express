@@ -1,9 +1,7 @@
-package edu.zut.cs.express.Register.domain;
+package edu.zut.cs.express.fangye.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import edu.zut.cs.express.base.domain.BaseEntity;
@@ -17,22 +15,22 @@ public class Register extends BaseEntity {
 	 */
 	private static final long serialVersionUID = -4376674977047164142L;
 
-	@Column(name = "IDNUM")
+	@Column
 	String idnum;
 	
-	@Column(name = "USERNAME")
+	@Column
 	String username;
 
-	@Column(name = "PASSWORD")
+	@Column
 	String password;
 
-	@Column(name = "EMAIL")
+	@Column
 	String email;
 	
-	@Column(name = "SEX")
+	@Column
 	String sex;
 	
-	@Column(name = "PHONE")
+	@Column
 	String phone;
 	
 
