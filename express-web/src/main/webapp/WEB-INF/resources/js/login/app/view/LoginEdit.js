@@ -11,10 +11,10 @@ Ext.define('login.view.LoginEdit', {
 			width : 300,
 			border : false,
 			items : [ {
-				xtype : 'textfield',
-				name : 'userid',
-				fieldLabel : '用戶賬號'
-			}, {
+                xtype : 'textfield',
+                name : 'id',
+                fieldLabel : 'ID'
+            },  {
 				xtype : 'textfield',
 				name : 'username',
 				fieldLabel : '姓名'
@@ -22,8 +22,18 @@ Ext.define('login.view.LoginEdit', {
 				xtype : 'textfield',
 				name : 'sex',
 				fieldLabel : '性别'
-			},   
-		  ];
+			}, {
+				name : 'dateCreated',
+				type : 'date',
+				dateFormat : 'time',
+				sortable : true
+			}, {
+				name : 'dateModified',
+				type : 'date',
+				dateFormat : 'time',
+				sortable : true
+			}]
+		}];
 		this.buttons = [ {
 			text : '保存',
 			action : 'save'
