@@ -1,7 +1,7 @@
 Ext.define('journal.model.JournalModel', {
-	extend : 'Ext.data.Model',
-	alias : 'widget.journalModel',
-	fields : [ {
+    extend : 'Ext.data.Model',
+    alias : 'widget.journalModel',
+    fields : [{
 		name : 'id',
 		type : 'int',
 		sortable : true
@@ -31,5 +31,5 @@ Ext.define('journal.model.JournalModel', {
 		type : 'date',
 		dateFormat : 'time',
 		sortable : true
-	} ]
+	}]
 });

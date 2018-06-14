@@ -1,6 +1,6 @@
-Ext.define('journal.controller.JournalController', {
+Ext.define('journal.controller.journalController', {
     extend : 'Ext.app.Controller',
-    alias : 'widget.JournalController',
+    alias : 'widget.journalController',
     stores : [ 'JournalStore' ],
     models : [ 'JournalModel' ],
     views : [ 'JournalGrid', 'JournalEdit' ],
@@ -10,7 +10,7 @@ Ext.define('journal.controller.JournalController', {
                 itemdblclick : this.editJournal
             },
             'journalEdit button[action=save]' : {
-                click : this.updateJournal
+                click : this.updatejournal
             }
         });
     },

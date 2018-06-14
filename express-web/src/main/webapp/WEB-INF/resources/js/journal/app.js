@@ -1,16 +1,16 @@
 Ext.Loader.setConfig({
-	enabled : true
+    enabled : true
 });
 Ext.application({
-	name : 'Journal',
-	appFolder : server_context + '/resources/js/journal/app',
-	controllers : [ 'JournalController' ],
-	launch : function() {
-		Ext.create('Ext.container.Viewport', {
-			layout : 'fit',
-			items : [ {
-				xtype : 'journalGrid'
-			} ]
-		});
-	}
+    name : 'journal',
+    appFolder : server_context + '/resources/js/journal/app',
+    controllers : [ 'JournalController' ],
+    launch : function() {
+        Ext.create('Ext.container.Viewport', {
+            layout : 'fit',
+            items : [ {
+                xtype : 'journalGrid'
+            } ]
+        });
+    }
 });
