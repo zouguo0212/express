@@ -20,7 +20,8 @@
 	var basePath = localObj.protocol + "//" + localObj.host + "/" + contextPath;
 	var server_context = basePath;
 </script>
-<script src="${pageContext.request.contextPath}/resources/js/pay/app.js"></script>
+<script type="text/javascript"
+src="${pageContext.request.contextPath}/resources/js/pay/app.js"></script>
 <body>
 </body>
 </html>
