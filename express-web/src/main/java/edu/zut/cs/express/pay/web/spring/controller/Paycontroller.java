@@ -9,22 +9,22 @@ import edu.zut.cs.express.base.web.spring.controller.GenericController;
 import edu.zut.cs.express.customer.domain.Pay;
 import edu.zut.cs.express.customer.service.PayManager;
 
-	@Controller
-	@RequestMapping("/Pay")
-	public class Paycontroller extends GenericController<Pay, Long, PayManager> {
+@Controller
+@RequestMapping("/Pay")
+public class Paycontroller extends GenericController<Pay, Long, PayManager> {
 
-	    PayManager payManager;
- 
-	    @RequestMapping(method = RequestMethod.GET, value = "/index.html")
-		public String index() {
-			String result = "/pay/index";
-			return result;
-		}
-	    
-	    @Autowired
-	    public void setPayManager(PayManager payManager) {
-	        this.payManager = payManager;
-	        this.manager = this.payManager;
-	    }
+	PayManager payManager;
 
+	@RequestMapping(method = RequestMethod.GET, value = "/index.html")
+	public String index() {
+		String result = "/pay/index";
+		return result;
 	}
+
+	@Autowired
+	public void setPayManager(PayManager payManager) {
+		this.payManager = payManager;
+		this.manager = this.payManager;
+	}
+
+}
