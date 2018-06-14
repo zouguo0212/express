@@ -1,8 +1,8 @@
 package edu.zut.cs.express.staff.web.spring.controller;
 
+import edu.zut.cs.express.base.web.spring.controller.GenericController;
 import edu.zut.cs.express.staff.domain.Staff;
 import edu.zut.cs.express.staff.service.StaffManager;
-import edu.zut.cs.express.base.web.spring.controller.GenericController;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/staff")
+@RequestMapping("/staff/staff")
 public class StaffController extends GenericController<Staff, Long, StaffManager> {
 
     StaffManager staffManager;
