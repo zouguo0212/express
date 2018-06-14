@@ -1,6 +1,6 @@
-Ext.define('userorder.view.UserorderEdit', {
+Ext.define('myUserorder.view.MyUserorderEdit', {
 	extend : 'Ext.window.Window',
-	alias : 'widget.userorderEdit',
+	alias : 'widget.myUserorderEdit',
 	title : '编辑订单信息',
 	layout : 'fit',
 	autoShow : true,

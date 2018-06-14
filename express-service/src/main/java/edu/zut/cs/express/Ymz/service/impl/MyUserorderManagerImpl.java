@@ -1,4 +1,4 @@
-package edu.zut.cs.express.Userorder.service.impl;
+package edu.zut.cs.express.Ymz.service.impl;
 
 import java.util.List;
 
@@ -9,42 +9,42 @@ import org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers;
 import org.springframework.data.domain.ExampleMatcher.StringMatcher;
 import org.springframework.stereotype.Component;
 
-import edu.zut.cs.express.Userorder.dao.UserorderDao;
-import edu.zut.cs.express.Userorder.domain.Userorder;
-import edu.zut.cs.express.Userorder.service.UserorderManager;
+import edu.zut.cs.express.Ymz.dao.MyUserorderDao;
+import edu.zut.cs.express.Ymz.domain.MyUserorder;
+import edu.zut.cs.express.Ymz.service.MyUserorderManager;
 import edu.zut.cs.express.base.service.impl.GenericManagerImpl;
 
 @Component
-public class UserorderManagerImpl extends GenericManagerImpl<Userorder, Long> implements UserorderManager{
+public class MyUserorderManagerImpl extends GenericManagerImpl<MyUserorder, Long> implements MyUserorderManager{
 
-	UserorderDao userorderDao;
+	MyUserorderDao myuserorderDao;
 	
 	@Autowired
-	public void setUserorderDao(UserorderDao userorderDao) {
-		this.userorderDao = userorderDao;
-		this.dao = this.userorderDao;
+	public void setUserorderDao(MyUserorderDao userorderDao) {
+		this.myuserorderDao = userorderDao;
+		this.dao = this.myuserorderDao;
 	}
 	
 	@Override
-	public List<Userorder> findByKind(String kind) {
+	public List<MyUserorder> findByKind(String kind) {
 		// 创建查询条件数据对象
-		Userorder queryObjuet = new Userorder();
+		MyUserorder queryObjuet = new MyUserorder();
 		queryObjuet.setKind(kind);
 		// 创建匹配器，即如何使用查询条件
 		ExampleMatcher matcher = ExampleMatcher.matching()//构件对象
 		      .withMatcher("kind", GenericPropertyMatchers.startsWith())
 		      .withIgnorePaths("dateCreated","dateModified");
 		
-		Example<Userorder> example = Example.of(queryObjuet, matcher);
-		List<Userorder> result = dao.findAll(example);
+		Example<MyUserorder> example = Example.of(queryObjuet, matcher);
+		List<MyUserorder> result = dao.findAll(example);
 		
 		return result;
 	}
 
 	@Override
-	public List<Userorder> findByName(String name) {
+	public List<MyUserorder> findByName(String name) {
 		
-		Userorder queryObject = new Userorder();
+		MyUserorder queryObject = new MyUserorder();
 		queryObject.setDateCreated(null);
 		queryObject.setDateModified(null);
 		queryObject.setUsername(name);
@@ -53,8 +53,8 @@ public class UserorderManagerImpl extends GenericManagerImpl<Userorder, Long> im
 				.withStringMatcher(StringMatcher.CONTAINING)
 				.withIgnoreCase(true)
 				.withMatcher("name", GenericPropertyMatchers.startsWith());
-		Example<Userorder> example = Example.of(queryObject, matcher);
-		List<Userorder> result = dao.findAll(example);
+		Example<MyUserorder> example = Example.of(queryObject, matcher);
+		List<MyUserorder> result = dao.findAll(example);
 		
 		return result;
 	}
