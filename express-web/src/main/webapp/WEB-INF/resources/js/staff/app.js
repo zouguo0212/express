@@ -9,7 +9,7 @@ Ext.application({
 		Ext.create('Ext.container.Viewport', {
 			layout : 'fit',
 			items : [ {
-				xtype : 'StaffGrid'
+				xtype : 'staffGrid'
 			} ]
 		});
 	}
