@@ -5,7 +5,7 @@ var payStore = Ext.create('pay.store.PayStore');
 Ext.define('pay.view.PayGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.payGrid',
-	title : 'Express - 支付信息表',
+	title : 'pay - 支付信息表',
 	store : payStore,
 	columns : [ {
 		text : 'ID',
@@ -18,7 +18,7 @@ Ext.define('pay.view.PayGrid', {
 		sortable : true,
 		dataIndex : 'user_name'
 	}, {
-		text : "用户支付费用",
+		text : "用户费用",
 		width : 80,
 		sortable : true,
 		dataIndex : 'user_money'

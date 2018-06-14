@@ -3,19 +3,19 @@ Ext.require(['Ext.data.*', 'Ext.grid.*']);
 Ext.define('pay.PayModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
-						name : 'id',
+						name : 'idnum',
 						type : 'int',
 						sortable : true
 					}, {
-						name : 'username',
+						name : 'user_name',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'usermoney',
+						name : 'user_money',
 						type : 'int',
 						sortable : true
 					}, {
-						name : 'managermoney',
+						name : 'manager_money',
 						type : 'int',
 						sortable : true
 					},  {
@@ -122,28 +122,28 @@ var payGrid = new Ext.grid.GridPanel({
 						text : 'ID',
 						width : 50,
 						sortable : true,
-						dataIndex : 'id'
+						dataIndex : 'idnum'
 					}, {
 						text : "姓名",
 						width : 80,
 						sortable : true,
-						dataIndex : 'username',
+						dataIndex : 'user_name',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
 						}
 					}, {
-						text : "钱",
+						text : "用户钱",
 						width : 50,
 						sortable : true,
-						dataIndex : 'username',
+						dataIndex : 'user_money',
 						editor : genderFieldEditor
 					}, {
-						text : "钱",
+						text : "经理钱",
 						width : 50,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'managermoney'
+						dataIndex : 'manager_money'
 					},  {
 						text : "添加时间",
 						width : 150,
@@ -213,17 +213,13 @@ var payForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "学号",
+						fieldLabel : "ID",
 						xtype : 'textfield',
-						name : 'code'
+						name : 'id'
 					}, {
 						fieldLabel : "姓名",
 						xtype : 'textfield',
-						name : 'name'
-					}, {
-						fieldLabel : "性别",
-						xtype : 'textfield',
-						name : 'gender'
+						name : 'user_name'
 					}],
 			buttons : [{
 						xtype : 'button',

@@ -16,16 +16,16 @@ Ext.define('pay.view.PayEdit', {
 				fieldLabel : '工号'
 			}, {
 				xtype : 'textfield',
-				name : 'username',
+				name : 'user_name',
 				fieldLabel : '姓名'
 			}, {
 				xtype : 'textfield',
-				name : 'usermoney',
-				fieldLabel : '钱'
+				name : 'user_money',
+				fieldLabel : '用户钱'
 			}, {
 				xtype : 'textfield',
-				name : 'managermoney',
-				fieldLabel : '钱'
+				name : 'manager_money',
+				fieldLabel : '经理钱'
 			}]
 		} ];
 		this.buttons = [ {
