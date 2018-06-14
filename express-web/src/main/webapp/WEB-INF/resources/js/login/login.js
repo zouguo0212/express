@@ -1,14 +1,10 @@
-Ext.require(['Ext.data.*', 'Ext.grid.*']);
+Ext.require([ 'Ext.data.*', 'Ext.grid.*' ]);
 
 Ext.define('login.LoginModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
 						type : 'int',
-						sortable : true
-					}, {
-						name : 'userid',
-						type : 'string',
 						sortable : true
 					}, {
 						name : 'username',
@@ -108,8 +104,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var LoginGrid = new Ext.grid.GridPanel({
-			id : 'LoginGrid',
+var loginGrid = new Ext.grid.GridPanel({
+			id : 'loginGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -124,15 +120,6 @@ var LoginGrid = new Ext.grid.GridPanel({
 						sortable : true,
 						dataIndex : 'id'
 					}, {
-						text : "用戶賬號",
-						width : 120,
-						sortable : true,
-						dataIndex : 'userid',
-						editor : textFieldEditor,
-						field : {
-							xtype : 'textfield'
-						}
-					}, {
 						text : "姓名",
 						width : 80,
 						sortable : true,
@@ -146,7 +133,7 @@ var LoginGrid = new Ext.grid.GridPanel({
 						width : 50,
 						sortable : true,
 						dataIndex : 'sex',
-						editor : textFieldEditor
+						editor : genderFieldEditor
 					},, {
 						text : "添加时间",
 						width : 150,
@@ -186,15 +173,15 @@ var LoginGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-LoginGrid.getSelectionModel().on('selectionchange',
+loginGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-	          LoginGrid.down('#delete').setDisabled(selections.length === 0);
+	          loginGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
-	fieldLabel : '整数',
+	fieldLabel : '整数' ,
 	allowDecimals : false, // 不允许输入小数
-	nanText : '请输入有效整数', // 无效数字提示
+	nanText : '请输入有效整数' , // 无效数字提示
 	allowNegative : false
 		// 不允许输入负数
 	});
@@ -216,18 +203,14 @@ var loginForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "工号",
-						xtype : 'textfield',
-						name : 'userid'
-					}, {
+		        fieldLabel : "ID",
+		        xtype : 'textfield',
+		        name : 'id'
+		    }, {
 						fieldLabel : "姓名",
 						xtype : 'textfield',
 						name : 'username'
-					},  {
-						fieldLabel : "性别",
-						xtype : 'textfield',
-						name : 'sex'
-					}],
+					},  
 			buttons : [{
 						xtype : 'button',
 						text : '查询',
@@ -246,7 +229,7 @@ Ext.application({
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [loginForm, LoginGrid]
+							items : [loginForm, loginGrid]
 						});
 			}
 		});
