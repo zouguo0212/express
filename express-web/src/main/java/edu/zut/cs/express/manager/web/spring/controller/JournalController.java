@@ -10,14 +10,14 @@ import edu.zut.cs.express.manager.service.JournalManager;
 import edu.zut.cs.express.base.web.spring.controller.GenericController;
 
 @Controller
-@RequestMapping("/manager/Journal")
-public class Journalcontroller extends GenericController<Journal, Long, JournalManager>{
+@RequestMapping("/manager/journal")
+public class JournalController extends GenericController<Journal, Long, JournalManager>{
 	
 	JournalManager journalManager;
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/index.html")
 	public String index() {
-		String result = "/Journal/index";
+		String result = "/journal/index";
 		return result;
 	}
 

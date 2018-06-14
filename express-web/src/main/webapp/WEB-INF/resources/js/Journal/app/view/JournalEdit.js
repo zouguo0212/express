@@ -1,7 +1,7 @@
 Ext.define('journal.view.JournalEdit', {
 	extend : 'Ext.window.Window',
 	alias : 'widget.journalEdit',
-	title : '编辑财务信息',
+	title : '编辑日志信息',
 	layout : 'fit',
 	autoShow : true,
 	initComponent : function() {

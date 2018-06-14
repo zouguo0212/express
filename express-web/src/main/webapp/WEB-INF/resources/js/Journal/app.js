@@ -2,8 +2,8 @@ Ext.Loader.setConfig({
 	enabled : true
 });
 Ext.application({
-	name : 'journal',
-	appFolder : server_context + '/resources/js/journal/app',
+	name : 'Journal',
+	appFolder : server_context + '/resources/js/Journal/app',
 	controllers : [ 'JournalController' ],
 	launch : function() {
 		Ext.create('Ext.container.Viewport', {
