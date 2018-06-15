@@ -10,8 +10,8 @@ import edu.zut.cs.express.customer.domain.Pay;
 import edu.zut.cs.express.customer.service.PayManager;
 
 @Controller
-@RequestMapping("/Pay")
-public class Paycontroller extends GenericController<Pay, Long, PayManager> {
+@RequestMapping("/pay")
+public class PayController extends GenericController<Pay, Long, PayManager> {
 
 	PayManager payManager;
 
