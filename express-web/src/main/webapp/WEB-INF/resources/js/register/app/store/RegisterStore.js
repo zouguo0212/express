@@ -2,7 +2,7 @@ var pageSize = 20;
 
 Ext.define('register.store.RegisterStore', {
 	extend : 'Ext.data.Store',
-	alias : 'widget.RegisterStore',
+	alias : 'widget.registerStore',
 	autoLoad : true,
 	autoSync : true,// 需要同步
 	model : 'register.model.RegisterModel',
