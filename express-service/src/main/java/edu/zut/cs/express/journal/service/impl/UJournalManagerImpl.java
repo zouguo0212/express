@@ -19,8 +19,14 @@ public class UJournalManagerImpl extends GenericManagerImpl<UJournal,Long> imple
 
 	UJournalDao ujournalDao;
 	
+	@Autowired
+	public void setUJournalDao(UJournalDao ujournalDao) {
+		this.ujournalDao = ujournalDao;
+		this.dao = this.ujournalDao;
+	}
+	
 	@Override
-	public List<UJournal> findbyusername(String username) {
+	public List<UJournal> findByusername(String username) {
 		// 创建查询条件数据对象
 		UJournal queryObjuet = new UJournal();
 		queryObjuet.setUsername(username);
@@ -35,7 +41,7 @@ public class UJournalManagerImpl extends GenericManagerImpl<UJournal,Long> imple
 	}
 
 	@Override
-	public List<UJournal> findbyemail(String email) {
+	public List<UJournal> findByemail(String email) {
 		UJournal queryObject = new UJournal();
 		queryObject.setDateCreated(null);
 		queryObject.setDateModified(null);
@@ -50,12 +56,5 @@ public class UJournalManagerImpl extends GenericManagerImpl<UJournal,Long> imple
 	}
 	
 
-	@Autowired
-	public void setUJournalDao(UJournalDao ujournalDao) {
-		this.ujournalDao = ujournalDao;
-		this.dao = this.ujournalDao;
-	}
-	
-	
 }
 

@@ -33,14 +33,6 @@ public class PayManagerTest extends GenericManagerTestCase<Long, Pay, PayManager
 		pay.setManger_money(200);
 		this.entity = this.manager.save(pay);
 	}
-	
-	@Test
-	public void testFindByidnum() {
-		String idnum = this.entity.getIdnum();
-		List<Pay> result = this.payManager.findbyIDnum(idnum);
-		//System.out.println(result.toString());
-		//assertEquals(idnum, result.get(0).getIDnum());
-	}
 	@Test
 	public void testFindByuser_name() {
 		
