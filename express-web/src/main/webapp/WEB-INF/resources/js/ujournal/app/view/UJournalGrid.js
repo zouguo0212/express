@@ -1,6 +1,6 @@
 var pageSize = 20;
 
-var studentStore = Ext.create('ujournal.store.UJournalStore');
+var ujournalStore = Ext.create('ujournal.store.UJournalStore');
 
 Ext.define('ujournal.view.UJournalGrid', {
 	extend : 'Ext.grid.GridPanel',
