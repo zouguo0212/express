@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/ujournal")
-public class UJournalcontroller extends GenericController<UJournal, Long, UJournalManager> {
+public class UJournalController extends GenericController<UJournal, Long, UJournalManager> {
 
 	UJournalManager ujournalManager;
 
