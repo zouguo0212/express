@@ -1,6 +1,6 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('userorder.UserorderModel', {
+Ext.define('myUserorder.MyUserorderModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
@@ -44,7 +44,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'userorder.UserorderModel',
+			model : 'myUserorder.MyUserorderModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -116,8 +116,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var userorderGrid = new Ext.grid.GridPanel({
-			id : 'userorderGrid',
+var myUserorderGrid = new Ext.grid.GridPanel({
+			id : 'myUserorderGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -206,9 +206,9 @@ var userorderGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-userorderGrid.getSelectionModel().on('selectionchange',
+myUserorderGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-	          userorderGrid.down('#delete').setDisabled(selections.length === 0);
+	          myUserorderGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -227,7 +227,7 @@ var clearForm = function() {
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var userorderForm = new Ext.form.FormPanel({
+var myUserorderForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,
@@ -266,7 +266,7 @@ Ext.application({
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [userorderForm, userorderGrid]
+							items : [myUserorderForm, myUserorderGrid]
 						});
 			}
 		});

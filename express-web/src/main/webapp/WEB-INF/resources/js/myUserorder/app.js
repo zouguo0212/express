@@ -2,14 +2,14 @@ Ext.Loader.setConfig({
 	enabled : true
 });
 Ext.application({
-	name : 'userorder',
-	appFolder : server_context + '/resources/js/userorder/app',
-	controllers : [ 'UserorderController' ],
+	name : 'myUserorder',
+	appFolder : server_context + '/resources/js/myUserorder/app',
+	controllers : [ 'MyUserorderController' ],
 	launch : function() {
 		Ext.create('Ext.container.Viewport', {
 			layout : 'fit',
 			items : [ {
-				xtype : 'userorderGrid'
+				xtype : 'myUserorderGrid'
 			} ]
 		});
 	}
