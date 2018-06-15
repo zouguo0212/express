@@ -25,5 +25,6 @@ public class UJournalController extends GenericController<UJournal, Long, UJourn
     public void setRegisterManager(UJournalManager ujournalManager) {
         this.ujournalManager = ujournalManager;
         this.manager = this.ujournalManager;
+        
     }
 }
