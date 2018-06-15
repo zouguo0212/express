@@ -1,17 +1,17 @@
 var pageSize = 20;
 
-Ext.define('register.store.RegisterStore', {
+Ext.define('pay.store.PayStore', {
 	extend : 'Ext.data.Store',
-	alias : 'widget.registerStore',
+	alias : 'widget.payStore',
 	autoLoad : true,
 	autoSync : true,// 需要同步
-	model : 'register.model.RegisterModel',
+	model : 'pay.model.PayModel',
 	proxy : {
-		url : server_context + '/fangye/register/.json',
+		url : server_context + '/pay/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/fangye/register/.json',
-			update : server_context + '/fangye/register/.json'
+			read : server_context + '/pay/.json',
+			update : server_context + '/pay/.json'
 		},
 		reader : {
 			type : 'json',

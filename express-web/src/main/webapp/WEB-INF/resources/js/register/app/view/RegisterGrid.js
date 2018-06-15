@@ -5,7 +5,7 @@ var registerStore = Ext.create('register.store.RegisterStore');
 Ext.define('register.view.RegisterGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.registerGrid',
-	title : 'Express - 订单信息表',
+	title : 'Express - 人员信息表',
 	store : registerStore,
 	columns : [ {
 		text : 'ID',
@@ -24,7 +24,7 @@ Ext.define('register.view.RegisterGrid', {
 		dataIndex : 'idnum'
 	}, {
 		text : "email",
-		width : 80,
+		width : 120,
 		sortable : true,
 		dataIndex : 'email'
 	}, {
