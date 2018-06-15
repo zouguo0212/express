@@ -1,4 +1,4 @@
-package edu.zut.cs.express.Userorder.domain;
+package edu.zut.cs.express.Ymz.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +8,7 @@ import edu.zut.cs.express.base.domain.BaseEntity;
 
 @Table(name = "T_USER_ORDER")
 @Entity
-public class Userorder extends BaseEntity {
+public class MyUserorder extends BaseEntity {
 	
 	/**
 	 * 

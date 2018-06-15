@@ -1,12 +1,12 @@
 var pageSize = 20;
 
-var studentStore = Ext.create('userorder.store.UserorderStore');
+var myUserorderStore = Ext.create('myUserorder.store.MyUserorderStore');
 
-Ext.define('userorder.view.UserorderGrid', {
+Ext.define('myUserorder.view.MyUserorderGrid', {
 	extend : 'Ext.grid.GridPanel',
-	alias : 'widget.userorderGrid',
-	title : 'Express - 订单信息表',
-	store : userorderStore,
+	alias : 'widget.myUserorderGrid',
+	title : 'Ymz - 订单信息表',
+	store : myUserorderStore,
 	columns : [ {
 		text : 'ID',
 		width : 50,
@@ -58,7 +58,7 @@ Ext.define('userorder.view.UserorderGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : studentStore,
+		store : myUserorderStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',
