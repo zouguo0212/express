@@ -1,33 +1,43 @@
 var pageSize = 20;
 
-var loginStore = Ext.create('login.store.LoginStore');
+var myUserorderStore = Ext.create('myUserorder.store.MyUserorderStore');
 
-Ext.define('login.view.LoginGrid', {
+Ext.define('myUserorder.view.MyUserorderGrid', {
 	extend : 'Ext.grid.GridPanel',
-	alias : 'widget.loginGrid',
-	title : 'Express - 用戶信息表',
-	store : loginStore,
+	alias : 'widget.myUserorderGrid',
+	title : 'Ymz - 订单信息表',
+	store : myUserorderStore,
 	columns : [ {
 		text : 'ID',
 		width : 50,
 		sortable : true,
 		dataIndex : 'id'
 	}, {
-		text : "用戶賬號",
-		width : 120,
+		text : "时间",
+		width : 80,
 		sortable : true,
-		dataIndex : 'userid'
+		dataIndex : 'time'
 	}, {
 		text : "姓名",
 		width : 80,
 		sortable : true,
-		dataIndex : 'username'
+		dataIndex : 'name'
 	}, {
-		text : "性别",
+		text : "类别",
 		width : 80,
 		sortable : true,
-		dataIndex : 'sex'
-	},  {
+		dataIndex : 'kind'
+	}, {
+		text : "快递号",
+		width : 120,
+		sortable : true,
+		dataIndex : 'expnum'
+	}, {
+		text : "电子邮箱",
+		width : 80,
+		sortable : true,
+		dataIndex : 'email'
+	}, {
 		text : "添加时间",
 		width : 150,
 		dataIndex : 'dateCreated',
@@ -48,7 +58,7 @@ Ext.define('login.view.LoginGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : loginStore,
+		store : myUserorderStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',

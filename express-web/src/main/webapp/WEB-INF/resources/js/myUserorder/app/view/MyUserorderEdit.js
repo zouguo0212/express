@@ -1,7 +1,7 @@
-Ext.define('login.view.LoginEdit', {
+Ext.define('myUserorder.view.MyUserorderEdit', {
 	extend : 'Ext.window.Window',
-	alias : 'widget.LoginEdit',
-	title : '编辑用戶信息',
+	alias : 'widget.myUserorderEdit',
+	title : '编辑订单信息',
 	layout : 'fit',
 	autoShow : true,
 	initComponent : function() {
@@ -11,29 +11,27 @@ Ext.define('login.view.LoginEdit', {
 			width : 300,
 			border : false,
 			items : [ {
-                xtype : 'textfield',
-                name : 'id',
-                fieldLabel : 'ID'
-            },  {
 				xtype : 'textfield',
-				name : 'username',
+				name : 'time',
+				fieldLabel : '时间'
+			}, {
+				xtype : 'textfield',
+				name : 'name',
 				fieldLabel : '姓名'
 			}, {
 				xtype : 'textfield',
-				name : 'sex',
-				fieldLabel : '性别'
+				name : 'kind',
+				fieldLabel : '类别'
 			}, {
-				name : 'dateCreated',
-				type : 'date',
-				dateFormat : 'time',
-				sortable : true
+				xtype : 'textfield',
+				name : 'expnum',
+				fieldLabel : '单号'
 			}, {
-				name : 'dateModified',
-				type : 'date',
-				dateFormat : 'time',
-				sortable : true
+				xtype : 'textfield',
+				name : 'email',
+				fieldLabel : '电子邮件'
 			}]
-		}];
+		} ];
 		this.buttons = [ {
 			text : '保存',
 			action : 'save'

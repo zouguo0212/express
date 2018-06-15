@@ -1,17 +1,17 @@
 var pageSize = 20;
 
-Ext.define('staff.store.StaffStore', {
+Ext.define('myUserorder.store.MyUserorderStore', {
 	extend : 'Ext.data.Store',
-	alias : 'widget.staffStore',
+	alias : 'widget.myUserorderStore',
 	autoLoad : true,
 	autoSync : true,// 需要同步
-	model : 'staff.model.StaffModel',
+	model : 'myUserorder.model.MyUserorderModel',
 	proxy : {
-		url : server_context + '/staff/staff/.json',
+		url : server_context + '/Ymz/myUserorder/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/staff/staff/.json',
-			update : server_context + '/staff/staff/.json'
+			read : server_context + '/Ymz/myUserorder/.json',
+			update : server_context + '/Ymz/myUserorder/.json'
 		},
 		reader : {
 			type : 'json',

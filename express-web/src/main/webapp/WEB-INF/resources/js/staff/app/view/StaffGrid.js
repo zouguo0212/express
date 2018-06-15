@@ -1,11 +1,11 @@
 var pageSize = 20;
 
-var studentStore = Ext.create('staff.store.StaffStore');
+var staffStore = Ext.create('staff.store.StaffStore');
 
 Ext.define('staff.view.StaffGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.staffGrid',
-	title : 'Express - 员工信息表',
+	title : 'staff - 员工信息表',
 	store : staffStore,
 	columns : [ {
 		text : 'ID',
@@ -53,7 +53,7 @@ Ext.define('staff.view.StaffGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : studentStore,
+		store : staffStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',

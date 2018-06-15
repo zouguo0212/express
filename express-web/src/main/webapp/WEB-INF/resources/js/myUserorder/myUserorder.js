@@ -1,20 +1,32 @@
-Ext.require([ 'Ext.data.*', 'Ext.grid.*' ]);
+Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('login.LoginModel', {
+Ext.define('myUserorder.MyUserorderModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
 						type : 'int',
 						sortable : true
 					}, {
-						name : 'username',
+						name : 'name',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'sex',
+						name : 'time',
 						type : 'string',
 						sortable : true
-					},  {
+					}, {
+						name : 'kind',
+						type : 'string',
+						sortable : true
+					}, {
+						name : 'expnum',
+						type : 'string',
+						sortable : true
+					}, {
+						name : 'email',
+						type : 'string',
+						sortable : true
+					}, {
 						name : 'dateCreated',
 						type : 'date',
 						dateFormat : 'time',
@@ -32,7 +44,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'login.LoginModel',
+			model : 'myUserorder.MyUserorderModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -104,8 +116,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var loginGrid = new Ext.grid.GridPanel({
-			id : 'loginGrid',
+var myUserorderGrid = new Ext.grid.GridPanel({
+			id : 'myUserorderGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -113,28 +125,49 @@ var loginGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '客戶留言信息記錄',
+			title : '订单信息列表',
 			columns : [{
 						text : 'ID',
 						width : 50,
 						sortable : true,
 						dataIndex : 'id'
 					}, {
-						text : "姓名",
-						width : 80,
+						text : "时间",
+						width : 120,
 						sortable : true,
-						dataIndex : 'username',
+						dataIndex : 'time',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
 						}
 					}, {
-						text : "性别",
+						text : "姓名",
+						width : 80,
+						sortable : true,
+						dataIndex : 'name',
+						editor : textFieldEditor,
+						field : {
+							xtype : 'textfield'
+						}
+					}, {
+						text : "类别",
 						width : 50,
 						sortable : true,
-						dataIndex : 'sex',
-						editor : genderFieldEditor
-					},, {
+						editor : textFieldEditor,
+						dataIndex : 'kind'
+					}, {
+						text : "快递单号",
+						width : 80,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'expnum'
+					}, {
+						text : "电子邮箱",
+						width : 80,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'email'
+					}, {
 						text : "添加时间",
 						width : 150,
 						dataIndex : 'dateCreated',
@@ -173,28 +206,28 @@ var loginGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-loginGrid.getSelectionModel().on('selectionchange',
+myUserorderGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-	          loginGrid.down('#delete').setDisabled(selections.length === 0);
+	          myUserorderGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
-	fieldLabel : '整数' ,
+	fieldLabel : '整数',
 	allowDecimals : false, // 不允许输入小数
-	nanText : '请输入有效整数' , // 无效数字提示
+	nanText : '请输入有效整数', // 无效数字提示
 	allowNegative : false
 		// 不允许输入负数
 	});
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	loginForm.getForm().reset();
+	userorderForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var loginForm = new Ext.form.FormPanel({
+var myUserorderForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,
@@ -203,14 +236,18 @@ var loginForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-		        fieldLabel : "ID",
-		        xtype : 'textfield',
-		        name : 'id'
-		    }, {
+						fieldLabel : "时间",
+						xtype : 'textfield',
+						name : 'time'
+					}, {
 						fieldLabel : "姓名",
 						xtype : 'textfield',
-						name : 'username'
-					},  
+						name : 'name'
+					}, {
+						fieldLabel : "快递单号",
+						xtype : 'textfield',
+						name : 'expnum'
+					}],
 			buttons : [{
 						xtype : 'button',
 						text : '查询',
@@ -225,11 +262,11 @@ var loginForm = new Ext.form.FormPanel({
 		})
 
 Ext.application({
-			name : '用戶信息',
+			name : '订单信息',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [loginForm, loginGrid]
+							items : [myUserorderForm, myUserorderGrid]
 						});
 			}
 		});
