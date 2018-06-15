@@ -33,6 +33,7 @@ public class Pay extends BaseEntity {
 	}
 
 	@Column
+
 	String user_name;
 	@Column
 	int user_money;
