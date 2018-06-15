@@ -3,13 +3,14 @@ package edu.zut.cs.express.Userorder.dao;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import edu.zut.cs.express.Userorder.domain.Userorder;
+import edu.zut.cs.express.Ymz.dao.MyUserorderDao;
+import edu.zut.cs.express.Ymz.domain.MyUserorder;
 import edu.zut.cs.express.base.dao.GenericDaoTestCase;
 
-public class UserorderDaoTest extends GenericDaoTestCase<Long, Userorder, UserorderDao>{
+public class UserorderDaoTest extends GenericDaoTestCase<Long, MyUserorder, MyUserorderDao>{
 	
 	@Autowired
-	UserorderDao userorderDao;
+	MyUserorderDao userorderDao;
 	
 	@Test
 	public void test() {
