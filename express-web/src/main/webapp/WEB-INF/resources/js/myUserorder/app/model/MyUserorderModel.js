@@ -1,6 +1,6 @@
-Ext.define('userorder.model.UserorderModel', {
+Ext.define('myUserorder.model.MyUserorderModel', {
 	extend : 'Ext.data.Model',
-	alias : 'widget.userorderModel',
+	alias : 'widget.myUserorderModel',
 	fields : [ {
 		name : 'id',
 		type : 'int',

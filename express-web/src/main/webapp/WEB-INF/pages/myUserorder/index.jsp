@@ -23,7 +23,7 @@
 	var server_context = basePath;
 </script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/resources/js/Userorder/app.js"></script>
+	src="${pageContext.request.contextPath}/resources/js/myUserorder/app.js"></script>
 <body>
 </body>
 </html>
