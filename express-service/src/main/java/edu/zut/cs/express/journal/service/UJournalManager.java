@@ -7,7 +7,7 @@ import edu.zut.cs.express.base.service.GenericManager;
 
 public interface UJournalManager extends GenericManager<UJournal,Long>{
 	
-	List<UJournal> findbyusername(String username);
+	List<UJournal> findByusername(String username);
 	
-	List<UJournal> findbyemail(String email);
+	List<UJournal> findByemail(String email);
 }
