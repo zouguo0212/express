@@ -15,6 +15,7 @@
 <script type="text/javascript" src="<%=extjsPath%>ext-all.js"></script>
 <script type="text/javascript"
 	src="<%=extjsPath%>locale/ext-lang-zh_CN.js"></script>
+</script>
 <script type="text/javascript">
 	var localObj = window.location;
 	var contextPath = localObj.pathname.split("/")[1];
@@ -22,7 +23,7 @@
 	var server_context = basePath;
 </script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/resources/js/Pay/app.js"></script>
+	src="${pageContext.request.contextPath}/resources/js/ujournal/app.js"></script>
 <body>
 </body>
 </html>

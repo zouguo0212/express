@@ -1,6 +1,6 @@
-Ext.define('Register.view.RegisterEdit', {
+Ext.define('register.view.RegisterEdit', {
 	extend : 'Ext.window.Window',
-	alias : 'widget.RegisterEdit',
+	alias : 'widget.registerEdit',
 	title : '编辑订单信息',
 	layout : 'fit',
 	autoShow : true,
