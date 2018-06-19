@@ -20,13 +20,13 @@ public class UJournalManagerImpl extends GenericManagerImpl<UJournal,Long> imple
 	UJournalDao ujournalDao;
 	
 	@Autowired
-	public void setDinanceDao(UJournalDao ujournalDao) {
+	public void setUJournalDao(UJournalDao ujournalDao) {
 		this.ujournalDao = ujournalDao;
 		this.dao = this.ujournalDao;
 	}
 	
 	@Override
-	public List<UJournal> findbyusername(String username) {
+	public List<UJournal> findByusername(String username) {
 		// 创建查询条件数据对象
 		UJournal queryObjuet = new UJournal();
 		queryObjuet.setUsername(username);
@@ -41,24 +41,20 @@ public class UJournalManagerImpl extends GenericManagerImpl<UJournal,Long> imple
 	}
 
 	@Override
-	public List<UJournal> findbyemail(String email) {
-		
-		//创建查询条件数据对象
+	public List<UJournal> findByemail(String email) {
 		UJournal queryObject = new UJournal();
 		queryObject.setDateCreated(null);
 		queryObject.setDateModified(null);
 		queryObject.setEmail(email);
-		//创建适配器
-		ExampleMatcher matcher = ExampleMatcher.matching() //构件对象
+		ExampleMatcher matcher = ExampleMatcher.matching()
 				.withStringMatcher(StringMatcher.CONTAINING)
-				.withIgnoreCase(true)//忽略大小写
+				.withIgnoreCase(true)
 				.withMatcher("email", GenericPropertyMatchers.startsWith());
-		//创建实例并查询
 		Example<UJournal> example = Example.of(queryObject,matcher);
 		List<UJournal> result = dao.findAll(example);
 		return result;
 	}
-
 	
+
 }
 

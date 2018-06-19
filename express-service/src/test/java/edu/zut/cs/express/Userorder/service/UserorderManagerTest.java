@@ -3,22 +3,23 @@ package edu.zut.cs.express.Userorder.service;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import edu.zut.cs.express.Userorder.domain.Userorder;
+import edu.zut.cs.express.Ymz.domain.MyUserorder;
+import edu.zut.cs.express.Ymz.service.MyUserorderManager;
 import edu.zut.cs.express.base.service.GenericManagerTestCase;
 
-public class UserorderManagerTest extends GenericManagerTestCase<Long, Userorder, UserorderManager>{
+public class UserorderManagerTest extends GenericManagerTestCase<Long, MyUserorder, MyUserorderManager>{
 
-	UserorderManager userorderManager;
+	MyUserorderManager userorderManager;
 	
 	@Autowired
-	public void setUserorderTestManager(UserorderManager userorderManager) {
+	public void setUserorderTestManager(MyUserorderManager userorderManager) {
 		this.userorderManager = userorderManager;
 		this.manager = this.userorderManager;
 	}
 	
 	
 	public UserorderManagerTest() {
-		super(Userorder.class);
+		super(MyUserorder.class);
 		
 	}
 	

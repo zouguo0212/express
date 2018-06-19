@@ -1,6 +1,6 @@
 var pageSize = 20;
 
-var studentStore = Ext.create('login.store.LoginStore');
+var loginStore = Ext.create('login.store.LoginStore');
 
 Ext.define('login.view.LoginGrid', {
 	extend : 'Ext.grid.GridPanel',
@@ -48,7 +48,7 @@ Ext.define('login.view.LoginGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : studentStore,
+		store : loginStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',

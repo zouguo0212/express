@@ -2,16 +2,16 @@ var pageSize = 20;
 
 Ext.define('login.store.LoginStore', {
 	extend : 'Ext.data.Store',
-	alias : 'widget.loginStore',
+	alias : 'widget.LoginStore',
 	autoLoad : true,
 	autoSync : true,// 需要同步
 	model : 'login.model.LoginModel',
 	proxy : {
-		url : server_context + '/login/.json',
+		url : server_context + '/login/login/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/login/.json',
-			update : server_context + '/login/.json'
+			read : server_context + '/login/login/.json',
+			update : server_context + '/login/login/.json'
 		},
 		reader : {
 			type : 'json',
