@@ -30,7 +30,7 @@ Ext.define('login.LoginModel', {
 						name : 'satisficing',
 						type : 'string',
 						sortable : true
-					}, {
+					}/*, {
 						name : 'dateCreated',
 						type : 'date',
 						dateFormat : 'time',
@@ -40,7 +40,7 @@ Ext.define('login.LoginModel', {
 						type : 'date',
 						dateFormat : 'time',
 						sortable : true
-					}]
+					}*/]
 		});
 
 var pageSize = 20;
