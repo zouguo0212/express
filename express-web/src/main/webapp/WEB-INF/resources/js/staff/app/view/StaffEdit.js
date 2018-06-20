@@ -1,6 +1,6 @@
 Ext.define('staff.view.StaffEdit', {
 	extend : 'Ext.window.Window',
-	alias : 'widget.StaffEdit',
+	alias : 'widget.staffEdit',
 	title : '编辑员工信息',
 	layout : 'fit',
 	autoShow : true,
