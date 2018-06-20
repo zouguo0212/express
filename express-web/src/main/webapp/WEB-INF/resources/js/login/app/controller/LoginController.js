@@ -6,16 +6,16 @@ Ext.define('login.controller.LoginController', {
 	views : [ 'LoginGrid', 'LoginEdit' ],
 	init : function() {
 		this.control({
-			'LoginGrid' : {
+			'loginGrid' : {
 				itemdblclick : this.editLogin
 			},
-			'LoginEdit button[action=save]' : {
+			'loginEdit button[action=save]' : {
 				click : this.updateLogin
 			}
 		});
 	},
 	editLogin : function(grid, record) {
-		var view = Ext.widget('LoginEdit');
+		var view = Ext.widget('loginEdit');
 		view.down('form').loadRecord(record);
 	},
 	updateLogin : function(button) {

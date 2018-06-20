@@ -1,44 +1,44 @@
 var pageSize = 20;
 
-var loginStore = Ext.create('login.store.LoginStore');
+var payStore = Ext.create('pay.store.PayStore');
 
-Ext.define('login.view.LoginGrid', {
+Ext.define('pay.view.PayGrid', {
 	extend : 'Ext.grid.GridPanel',
-	alias : 'widget.loginGrid',
-	title : 'Express - 用戶信息表',
-	store : loginStore,
+	alias : 'widget.payGrid',
+	title : 'pay - 支付信息表',
+	store : payStore,
 	columns : [ {
 		text : 'ID',
 		width : 50,
 		sortable : true,
-		dataIndex : 'id'
-	}, {
-		text : "用戶賬號",
-		width : 120,
-		sortable : true,
-		dataIndex : 'userid'
-	}, {
-		text : "姓名",
+		dataIndex : 'idnum'
+	},  {
+		text : "用户姓名",
 		width : 80,
 		sortable : true,
-		dataIndex : 'username'
+		dataIndex : 'user_name'
 	}, {
-		text : "性别",
+		text : "用户费用",
 		width : 80,
 		sortable : true,
-		dataIndex : 'sex'
+		dataIndex : 'user_money'
 	}, {
-		xtype : 'textfield',
-		name : 'password',
-		fieldLabel : '密码'
-	},{
-		xtype : 'textfield',
-		name : 'satisficing',
-		fieldLabel : '满意度'
-	},{
-		xtype : 'textfield',
-		name : 'passage',
-		fieldLabel : '留言信息'
+		text : "收取费用",
+		width : 80,
+		sortable : true,
+		dataIndex : 'manager_money'
+	},  {
+		text : "添加时间",
+		width : 150,
+		dataIndex : 'dateCreated',
+		renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
+		sortable : true
+	}, {
+		text : "修改时间",
+		width : 150,
+		dataIndex : 'dateModified',
+		renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
+		sortable : true
 	} ],
 	viewConfig : {
 		columnsText : '列',
@@ -48,7 +48,7 @@ Ext.define('login.view.LoginGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : loginStore,
+		store : payStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',

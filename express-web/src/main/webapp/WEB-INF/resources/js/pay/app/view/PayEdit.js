@@ -1,7 +1,7 @@
-Ext.define('myUserorder.view.MyUserorderEdit', {
+Ext.define('pay.view.PayEdit', {
 	extend : 'Ext.window.Window',
-	alias : 'widget.myUserorderEdit',
-	title : '编辑订单信息',
+	alias : 'widget.payEdit',
+	title : '编辑支付信息',
 	layout : 'fit',
 	autoShow : true,
 	initComponent : function() {
@@ -11,29 +11,21 @@ Ext.define('myUserorder.view.MyUserorderEdit', {
 			width : 300,
 			border : false,
 			items : [ {
-                xtype : 'textfield',
-                name : 'id',
-                fieldLabel : 'ID'
-            },{
 				xtype : 'textfield',
-				name : 'time',
-				fieldLabel : '时间'
+				name : 'idnum',
+				fieldLabel : '工号'
 			}, {
 				xtype : 'textfield',
-				name : 'name',
+				name : 'user_name',
 				fieldLabel : '姓名'
 			}, {
 				xtype : 'textfield',
-				name : 'kind',
-				fieldLabel : '类别'
+				name : 'user_money',
+				fieldLabel : '用户钱'
 			}, {
 				xtype : 'textfield',
-				name : 'expnum',
-				fieldLabel : '单号'
-			}, {
-				xtype : 'textfield',
-				name : 'email',
-				fieldLabel : '电子邮件'
+				name : 'manager_money',
+				fieldLabel : '经理钱'
 			}]
 		} ];
 		this.buttons = [ {
