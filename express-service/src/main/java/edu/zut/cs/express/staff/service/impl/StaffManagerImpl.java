@@ -56,7 +56,7 @@ public class StaffManagerImpl extends GenericManagerImpl<Staff, Long> implements
 	}
 
 	@Autowired
-	public void setStudentDao(StaffDao staffDao) {
+	public void setStaffDao(StaffDao staffDao) {
 		this.staffDao = staffDao;
 		this.dao = this.staffDao;
 	}

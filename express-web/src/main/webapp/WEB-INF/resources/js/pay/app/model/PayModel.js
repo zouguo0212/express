@@ -1,7 +1,11 @@
 Ext.define('pay.model.PayModel', {
 	extend : 'Ext.data.Model',
 	alias : 'widget.payModel',
-	fields : [  {
+	fields : [ {
+        name : 'id',
+        type : 'int',
+        sortable : true
+    }, {
         name : 'idnum',
         type : 'int',
         sortable : true
