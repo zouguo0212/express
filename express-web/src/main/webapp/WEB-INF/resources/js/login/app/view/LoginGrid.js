@@ -27,18 +27,18 @@ Ext.define('login.view.LoginGrid', {
 		width : 80,
 		sortable : true,
 		dataIndex : 'sex'
-	},  {
-		text : "添加时间",
-		width : 150,
-		dataIndex : 'dateCreated',
-		renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
-		sortable : true
 	}, {
-		text : "修改时间",
-		width : 150,
-		dataIndex : 'dateModified',
-		renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
-		sortable : true
+		xtype : 'textfield',
+		name : 'password',
+		fieldLabel : '密码'
+	},{
+		xtype : 'textfield',
+		name : 'satisficing',
+		fieldLabel : '满意度'
+	},{
+		xtype : 'textfield',
+		name : 'passage',
+		fieldLabel : '留言信息'
 	} ],
 	viewConfig : {
 		columnsText : '列',
