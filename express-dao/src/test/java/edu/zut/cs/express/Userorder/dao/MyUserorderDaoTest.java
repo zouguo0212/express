@@ -7,10 +7,15 @@ import edu.zut.cs.express.Ymz.dao.MyUserorderDao;
 import edu.zut.cs.express.Ymz.domain.MyUserorder;
 import edu.zut.cs.express.base.dao.GenericDaoTestCase;
 
-public class UserorderDaoTest extends GenericDaoTestCase<Long, MyUserorder, MyUserorderDao>{
+
+/**
+ * @author 杨曼珍
+ *
+ */
+public class MyUserorderDaoTest extends GenericDaoTestCase<Long, MyUserorder, MyUserorderDao>{
 	
 	@Autowired
-	MyUserorderDao userorderDao;
+	MyUserorderDao myUserorderDao;
 	
 	@Test
 	public void test() {

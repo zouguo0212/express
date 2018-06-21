@@ -27,7 +27,27 @@ Ext.define('login.view.LoginGrid', {
 		width : 80,
 		sortable : true,
 		dataIndex : 'sex'
-	},  {
+	},{
+		text : "邮箱",
+		width : 80,
+		sortable : true,
+		dataIndex : 'email'
+	},{
+		text : "密码",
+		width : 80,
+		sortable : true,
+		dataIndex : 'password'
+	}, {
+		text : "满意度",
+		width : 80,
+		sortable : true,
+		dataIndex : 'satisficing'
+	},{
+		text : "留言信息",
+		width : 120,
+		sortable : true,
+		dataIndex : 'passage'
+	},{
 		text : "添加时间",
 		width : 150,
 		dataIndex : 'dateCreated',
@@ -39,7 +59,7 @@ Ext.define('login.view.LoginGrid', {
 		dataIndex : 'dateModified',
 		renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
 		sortable : true
-	} ],
+	}  ],
 	viewConfig : {
 		columnsText : '列',
 		sortAscText : '升序',
