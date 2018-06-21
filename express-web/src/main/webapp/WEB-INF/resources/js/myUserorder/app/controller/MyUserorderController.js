@@ -7,10 +7,10 @@ Ext.define('myUserorder.controller.MyUserorderController', {
     init : function() {
         this.control({
             'myUserorderGrid' : {
-                itemdblclick : this.editMyUserorder
+                itemdblclick : this.editUserorder
             },
             'myUserorderEdit button[action=save]' : {
-                click : this.updateMyUserorder
+                click : this.updateUserorder
             }
         });
     },
