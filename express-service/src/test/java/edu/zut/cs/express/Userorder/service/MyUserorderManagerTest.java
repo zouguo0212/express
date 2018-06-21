@@ -11,18 +11,18 @@ import edu.zut.cs.express.base.service.GenericManagerTestCase;
  * @author 杨曼珍
  *
  */
-public class UserorderManagerTest extends GenericManagerTestCase<Long, MyUserorder, MyUserorderManager>{
+public class MyUserorderManagerTest extends GenericManagerTestCase<Long, MyUserorder, MyUserorderManager>{
 
-	MyUserorderManager userorderManager;
+	MyUserorderManager myUserorderManager;
 	
 	@Autowired
-	public void setUserorderTestManager(MyUserorderManager userorderManager) {
-		this.userorderManager = userorderManager;
-		this.manager = this.userorderManager;
+	public void setUserorderTestManager(MyUserorderManager myUserorderManager) {
+		this.myUserorderManager = myUserorderManager;
+		this.manager = this.myUserorderManager;
 	}
 	
 	
-	public UserorderManagerTest() {
+	public MyUserorderManagerTest() {
 		super(MyUserorder.class);
 		
 	}
