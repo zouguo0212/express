@@ -1,21 +1,21 @@
 Ext.define('staff.controller.StaffController', {
 	extend : 'Ext.app.Controller',
-	alias : 'widget.StaffController',
+	alias : 'widget.staffController',
 	stores : [ 'StaffStore' ],
 	models : [ 'StaffModel' ],
 	views : [ 'StaffGrid', 'StaffEdit' ],
 	init : function() {
 		this.control({
-			'StaffGrid' : {
+			'staffGrid' : {
 				itemdblclick : this.editStaff
 			},
-			'StaffEdit button[action=save]' : {
+			'staffEdit button[action=save]' : {
 				click : this.updateStaff
 			}
 		});
 	},
 	editStaff : function(grid, record) {
-		var view = Ext.widget('StaffEdit');
+		var view = Ext.widget('staffEdit');
 		view.down('form').loadRecord(record);
 	},
 	updateStaff : function(button) {

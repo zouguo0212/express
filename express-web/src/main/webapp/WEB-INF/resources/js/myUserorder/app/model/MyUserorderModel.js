@@ -6,23 +6,23 @@ Ext.define('myUserorder.model.MyUserorderModel', {
 		type : 'int',
 		sortable : true
 	}, {
-		name : 'name',
-		type : 'string',
-		sortable : true
-	}, {
 		name : 'time',
 		type : 'string',
 		sortable : true
-	}, {
-		name : 'email',
+	},{
+		name : 'name',
 		type : 'string',
 		sortable : true
-	}, {
+	},  {
 		name : 'kind',
 		type : 'string',
 		sortable : true
 	}, {
 		name : 'expnum',
+		type : 'string',
+		sortable : true
+	}, {
+		name : 'email',
 		type : 'string',
 		sortable : true
 	}, {
