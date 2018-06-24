@@ -6,8 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "T_MyFinance")
+@Entity(name = "T_MyFinance")
+@Table
 public class MyFinance extends BaseEntity {
 
     @Column
