@@ -18,17 +18,26 @@ import static org.junit.Assert.assertEquals;
 */
 public class MyFinanceDaoTest extends GenericDaoTestCase<Long,MyFinance,MyFinanceDao> {
 
-    @Autowired
     MyFinanceDao myFinanceDao;
+
+    @Autowired
+    public void setMyFinanceDao(MyFinanceDao myFinanceDao){
+        this.myFinanceDao = myFinanceDao;
+        this.dao = this.myFinanceDao;
+    }
 
     @Before
     public void setEntity()
     {
-
+        MyFinance myFinance = new MyFinance();
+        myFinance.setId(this.id);
+        myFinance.setName("徐畅");
+        myFinance.setSex("女");
+        myFinance.setBalance(50000);
+        myFinance.setAge(18);
+        MyFinance temp = this.dao.save(myFinance);
+        System.out.println(temp);
     }
-
-
-
     @Test
     public void testFindAll(){
         /**
@@ -47,9 +56,10 @@ public class MyFinanceDaoTest extends GenericDaoTestCase<Long,MyFinance,MyFinanc
          * @Description: Test findByid()
          * @Date: 2018/6/24 10:26
         */
-        long id = 23L;
+        Long id = new Long(23);
         Optional<MyFinance> result;
         result = this.myFinanceDao.findById(id);
+        assertEquals(result.isPresent(),true);
         System.out.println(result);
     }
 
@@ -62,9 +72,9 @@ public class MyFinanceDaoTest extends GenericDaoTestCase<Long,MyFinance,MyFinanc
        */
        MyFinance myFinance = new MyFinance();
        myFinance.setName("test_Save");
-       MyFinance test_Finance = this.myFinanceDao.save(myFinance);
+       MyFinance test_Finance = this.dao.save(myFinance);
        Long finance_id = test_Finance.getId();
-       MyFinance result = this.myFinanceDao.getOne(finance_id);
+       MyFinance result = this.dao.getOne(finance_id);
        assertEquals(test_Finance,result);
      //  System.out.println(test_Finance);
     //   System.out.println(result);
