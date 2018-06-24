@@ -16,6 +16,7 @@ public class MyFinanceController extends GenericController <MyFinance,Long,MyFin
 
     @RequestMapping(method = RequestMethod.GET,value = "/index.html")
     public String index(){
+
         String result = "/myFinance/index";
         return result;
     }
