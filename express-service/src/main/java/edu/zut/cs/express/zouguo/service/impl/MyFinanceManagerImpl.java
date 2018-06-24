@@ -28,6 +28,18 @@ public class MyFinanceManagerImpl extends GenericManagerImpl<MyFinance,Long> imp
         return result;
     }
 
+    @Override
+    public List<MyFinance> findByid(Long id){
+        MyFinance queryObject = new MyFinance();
+        queryObject.setId(id);
+        ExampleMatcher matcher = ExampleMatcher.matching()
+                .withMatcher("id",ExampleMatcher.GenericPropertyMatchers.startsWith())
+                .withIgnorePaths("dateCreated","dateModified");
+        Example<MyFinance> ex = Example.of(queryObject,matcher);
+        List<MyFinance> result = dao.findAll(ex);
+        return result;
+    }
+
     @Autowired
     public void setMyFinanceDao(MyFinanceDao myFinanceDao){
         this.myFinanceDao = myFinanceDao;
