@@ -6,9 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
+import static org.junit.Assert.assertEquals;
 import java.util.List;
 
 /**
@@ -38,14 +37,7 @@ public class MyFinanceManagerTest extends GenericManagerTestCase<Long,MyFinance,
          * @Description:
          * @Date: 2018/6/24 13:55
         */
-        MyFinance myFinance = new MyFinance();
-        myFinance.setId(1L);
-        myFinance.setName("李四");
-        myFinance.setSex("男");
-        myFinance.setAge(25);
-        myFinance.setBalance(5000);
-        this.entity = this.manager.save(myFinance);
-        System.out.println(this.entity);
+
     }
 
     @Test
@@ -74,6 +66,19 @@ public class MyFinanceManagerTest extends GenericManagerTestCase<Long,MyFinance,
 
     @Test
     public void testSave(){
-        
+        /**
+         * @author: Zouguo0212
+         * @Description:
+         * @Date: 2018/6/24 15:20
+        */
+        MyFinance myFinance = new MyFinance();
+        myFinance.setId(1L);
+        myFinance.setName("李四");
+        myFinance.setSex("男");
+        myFinance.setAge(25);
+        myFinance.setBalance(5000);
+        this.entity = this.manager.save(myFinance);
+        assertNotNull(this.entity);
+
     }
 }
