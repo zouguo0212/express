@@ -8,6 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import edu.zut.cs.express.base.dao.GenericDaoTestCase;
 import edu.zut.cs.express.fangye.domain.Register;
 
+/**
+ * @author FangYe
+ * 测试
+ */
 public class RegisterDaoTest extends GenericDaoTestCase<Long, Register, RegisterDao> {
 
 	@Autowired
