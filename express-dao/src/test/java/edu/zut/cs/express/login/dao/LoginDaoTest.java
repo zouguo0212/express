@@ -1,6 +1,6 @@
 package edu.zut.cs.express.login.dao;
 
-import java.util.List;
+//import java.util.List;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +15,9 @@ public class LoginDaoTest extends GenericDaoTestCase<Long, Login, LoginDao> {
 	LoginDao LoginDao;
 
 	@Test
-	public void testFindAll() {
-
-		List<Login> result = this.LoginDao.findAll();
-
+	public void test() {
+		System.out.println("This is Junit Test!");
+	
 	}
 
 }
