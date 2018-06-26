@@ -8,7 +8,7 @@ import edu.zut.cs.express.base.service.GenericManager;
 
 /**
  * @author 杨曼珍
- *
+ *接口
  */
 public interface MyUserorderManager extends GenericManager<MyUserorder, Long> {
 

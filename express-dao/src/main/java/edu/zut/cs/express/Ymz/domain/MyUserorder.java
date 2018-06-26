@@ -8,7 +8,7 @@ import edu.zut.cs.express.base.domain.BaseEntity;
 
 /**
  * @author 杨曼珍
- *
+ *实体
  */
 @Table(name = "T_USER_ORDER")
 @Entity
