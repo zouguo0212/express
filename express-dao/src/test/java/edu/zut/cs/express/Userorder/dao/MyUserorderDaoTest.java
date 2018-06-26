@@ -12,10 +12,10 @@ import edu.zut.cs.express.base.dao.GenericDaoTestCase;
  * @author 杨曼珍
  *
  */
-public class UserorderDaoTest extends GenericDaoTestCase<Long, MyUserorder, MyUserorderDao>{
+public class MyUserorderDaoTest extends GenericDaoTestCase<Long, MyUserorder, MyUserorderDao>{
 	
 	@Autowired
-	MyUserorderDao userorderDao;
+	MyUserorderDao myUserorderDao;
 	
 	@Test
 	public void test() {
