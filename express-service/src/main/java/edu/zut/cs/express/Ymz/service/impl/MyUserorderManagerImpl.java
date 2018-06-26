@@ -16,7 +16,7 @@ import edu.zut.cs.express.base.service.impl.GenericManagerImpl;
 
 /**
  * @author 杨曼珍
- *
+ *实现接口
  */
 @Component
 public class MyUserorderManagerImpl extends GenericManagerImpl<MyUserorder, Long> implements MyUserorderManager{
