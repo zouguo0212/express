@@ -25,7 +25,7 @@ public class MyFinanceDaoTest extends GenericDaoTestCase<Long,MyFinance,MyFinanc
     public void setEntity()
     {
         MyFinance myFinance = new MyFinance();
-        myFinance.setName("徐畅");
+        myFinance.setName("徐X");
         myFinance.setSex("女");
         myFinance.setBalance(50000);
         myFinance.setAge(18);
