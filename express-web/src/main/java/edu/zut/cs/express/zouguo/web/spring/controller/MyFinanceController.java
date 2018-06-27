@@ -21,6 +21,12 @@ public class MyFinanceController extends GenericController <MyFinance,Long,MyFin
         return result;
     }
 
+    @RequestMapping(method = RequestMethod.GET,value = "/formindex.html")
+    public String formindex(){
+        String result = "/myFinance/formindex";
+        return result;
+    }
+
     @Autowired
     public void setMyFinanceManager(MyFinanceManager myFinanceManager){
         this.myFinanceManager = myFinanceManager;

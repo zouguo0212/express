@@ -10,6 +10,13 @@
 <head>
     <title>快递小助手-财务表单</title>
 
+    <style>
+        h1.firsth{
+            background: aquamarine;
+            color : red;
+        }
+    </style>
+
 </head>
 <body>
 	<button onclick="butt1()">哈哈</button>
