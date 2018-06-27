@@ -1,10 +1,15 @@
-package edu.zut.cs.express.login.service;
+package edu.zut.cs.express.houjie.service;
 
 import java.util.List;
 
 import edu.zut.cs.express.base.service.GenericManager;
-import edu.zut.cs.express.login.domain.Login;
+import edu.zut.cs.express.houjie.domain.Login;
 
+/**
+ * @author houjie
+ * @Description:Define interface
+ * 
+ */
 public interface LoginManager extends GenericManager<Login, Long> {
 
 	List<Login> findByUserid(String userid);
