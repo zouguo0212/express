@@ -13,7 +13,10 @@ public class JournalDaoTest extends GenericDaoTestCase<Long, Journal, JournalDao
 
 	@Autowired
 	JournalDao journalDao;
-
+/**
+ * test build database
+ * 
+ */
 	@Test
 	public void testFindAll() {
 
