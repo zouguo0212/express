@@ -9,7 +9,7 @@ import edu.zut.cs.express.base.service.GenericManagerTestCase;
 
 /**
  * @author 杨曼珍
- *
+ *测试
  */
 public class MyUserorderManagerTest extends GenericManagerTestCase<Long, MyUserorder, MyUserorderManager>{
 

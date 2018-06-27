@@ -6,44 +6,45 @@ import javax.persistence.Table;
 
 import edu.zut.cs.express.base.domain.BaseEntity;
 
+/**
+ * @author guo
+ *
+ */
+
 @Table(name = "T_Customer_Pay")
 @Entity
+
+
 public class Pay extends BaseEntity {
-
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = -4376674977047164142L;
-
+	/*学生ID*/
 	@Column
 	String idnum;
+	/*学生姓名*/
+	@Column
+	String user_name;
+	/*支付费用*/
+	@Column
+	int user_money;
+	/*收取费用*/
+	@Column
+	int manger_money;
 
 	public void setIdnum(String idnum) {
 		this.idnum = idnum;
 	}
 
-
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
-	}
-
-
 	public String getIdnum() {
 		return idnum;
 	}
 
-	@Column
-
-	String user_name;
-	@Column
-	int user_money;
-	@Column
-	int manger_money;
-
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
+	}
 	public String getUser_name() {
 		return user_name;
 	}
-
 
 	public int getUser_money() {
 		return user_money;

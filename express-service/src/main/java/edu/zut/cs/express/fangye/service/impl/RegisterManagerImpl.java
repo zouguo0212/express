@@ -14,6 +14,10 @@ import edu.zut.cs.express.fangye.domain.Register;
 import edu.zut.cs.express.fangye.dao.RegisterDao;
 import edu.zut.cs.express.fangye.service.RegisterManager;
 
+/**
+ * @author FangYe
+ *  实现
+ */
 @Component
 public class RegisterManagerImpl extends GenericManagerImpl<Register, Long> implements RegisterManager {
 
