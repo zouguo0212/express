@@ -10,7 +10,7 @@ import edu.zut.cs.express.base.dao.GenericDaoTestCase;
 
 /**
  * @author 杨曼珍
- *
+ *测试
  */
 public class MyUserorderDaoTest extends GenericDaoTestCase<Long, MyUserorder, MyUserorderDao>{
 	
