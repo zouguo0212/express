@@ -1,19 +1,23 @@
-package edu.zut.cs.express.staff.web.spring.controller;
+package edu.zut.cs.express.zsy.web.spring.controller;
 
 import edu.zut.cs.express.base.web.spring.controller.GenericController;
-import edu.zut.cs.express.staff.domain.Staff;
-import edu.zut.cs.express.staff.service.StaffManager;
+import edu.zut.cs.express.zsy.domain.Staff;
+import edu.zut.cs.express.zsy.service.StaffManager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+/**
+ * @author:zsy0216
+ * @Description:defined class StaffController
+ */
 @Controller
-@RequestMapping("/staff/staff")
+@RequestMapping("/zsy/staff")
 public class StaffController extends GenericController<Staff, Long, StaffManager> {
 
-    StaffManager staffManager;
+	StaffManager staffManager;
 
 	@RequestMapping(method = RequestMethod.GET, value = "/index.html")
 	public String index() {
@@ -21,9 +25,9 @@ public class StaffController extends GenericController<Staff, Long, StaffManager
 		return result;
 	}
 
-    @Autowired
-    public void setStaffManager(StaffManager StaffManager) {
-        this.staffManager = StaffManager;
-        this.manager = this.staffManager;
-    }
+	@Autowired
+	public void setStaffManager(StaffManager StaffManager) {
+		this.staffManager = StaffManager;
+		this.manager = this.staffManager;
+	}
 }
