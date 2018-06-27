@@ -1,6 +1,6 @@
 Ext.require([ 'Ext.data.*', 'Ext.grid.*' ]);
 
-Ext.define('login.LoginModel', {
+Ext.define('massage.MassageModel', {
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
@@ -48,7 +48,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'login.LoginModel',
+			model : 'massage.MassageModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -120,8 +120,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var loginGrid = new Ext.grid.GridPanel({
-			id : 'loginGrid',
+var massageGrid = new Ext.grid.GridPanel({
+			id : 'massageGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -216,9 +216,9 @@ var loginGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-loginGrid.getSelectionModel().on('selectionchange',
+massageGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-	          loginGrid.down('#delete').setDisabled(selections.length === 0);
+	          massageGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -231,13 +231,13 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	loginForm.getForm().reset();
+	massageForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var loginForm = new Ext.form.FormPanel({
+var massageForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,
@@ -272,7 +272,7 @@ Ext.application({
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [loginForm, loginGrid]
+							items : [massageForm, massageGrid]
 						});
 			}
 		});

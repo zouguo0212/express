@@ -2,14 +2,14 @@ Ext.Loader.setConfig({
 	enabled : true
 });
 Ext.application({
-	name : 'login',
-	appFolder : server_context + '/resources/js/login/app',
-	controllers : [ 'LoginController' ],
+	name : 'massage',
+	appFolder : server_context + '/resources/js/massage/app',
+	controllers : [ 'MassageController' ],
 	launch : function() {
 		Ext.create('Ext.container.Viewport', {
 			layout : 'fit',
 			items : [ {
-				xtype : 'loginGrid'
+				xtype : 'massageGrid'
 			} ]
 		});
 	}

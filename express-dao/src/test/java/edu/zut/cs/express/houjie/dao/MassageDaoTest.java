@@ -6,18 +6,18 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import edu.zut.cs.express.base.dao.GenericDaoTestCase;
-import edu.zut.cs.express.houjie.dao.LoginDao;
-import edu.zut.cs.express.houjie.domain.Login;
+import edu.zut.cs.express.houjie.dao.MassageDao;
+import edu.zut.cs.express.houjie.domain.Massage;
 
 /**
  * @author houjie
  * @Description:test
  * 
  */
-public class LoginDaoTest extends GenericDaoTestCase<Long, Login, LoginDao> {
+public class MassageDaoTest extends GenericDaoTestCase<Long, Massage, MassageDao> {
 
 	@Autowired
-	LoginDao LoginDao;
+	MassageDao MassageDao;
 
 	@Test
 	public void test() {

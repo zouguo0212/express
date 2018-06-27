@@ -1,17 +1,17 @@
 var pageSize = 20;
 
-Ext.define('login.store.LoginStore', {
+Ext.define('massage.store.MassageStore', {
 	extend : 'Ext.data.Store',
-	alias : 'widget.LoginStore',
+	alias : 'widget.massageStore',
 	autoLoad : true,
 	autoSync : true,// 需要同步
-	model : 'login.model.LoginModel',
+	model : 'massage.model.MassageModel',
 	proxy : {
-		url : server_context + '/houjie/login/.json',
+		url : server_context + '/houjie/massage/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/houjie/login/.json',
-			update : server_context + '/houjie/login/.json'
+			read : server_context + '/houjie/massage/.json',
+			update : server_context + '/houjie/massage/.json'
 		},
 		reader : {
 			type : 'json',
