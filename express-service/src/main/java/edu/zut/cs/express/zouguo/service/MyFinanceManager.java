@@ -8,5 +8,5 @@ import java.util.List;
 public interface MyFinanceManager extends GenericManager<MyFinance,Long> {
 
     List<MyFinance> findByname(String name);
-    
+    List<MyFinance> findByid(Long id);
 }

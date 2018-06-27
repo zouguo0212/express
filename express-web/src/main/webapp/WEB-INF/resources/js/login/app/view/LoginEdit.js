@@ -1,6 +1,6 @@
 Ext.define('login.view.LoginEdit', {
 	extend : 'Ext.window.Window',
-	alias : 'widget.LoginEdit',
+	alias : 'widget.loginEdit',
 	title : '编辑用戶信息',
 	layout : 'fit',
 	autoShow : true,
@@ -12,8 +12,8 @@ Ext.define('login.view.LoginEdit', {
 			border : false,
 			items : [ {
                 xtype : 'textfield',
-                name : 'id',
-                fieldLabel : 'ID'
+                name : 'userid',
+                fieldLabel : '用户账号'
             },  {
 				xtype : 'textfield',
 				name : 'username',
@@ -22,16 +22,18 @@ Ext.define('login.view.LoginEdit', {
 				xtype : 'textfield',
 				name : 'sex',
 				fieldLabel : '性别'
-			}, {
-				name : 'dateCreated',
-				type : 'date',
-				dateFormat : 'time',
-				sortable : true
-			}, {
-				name : 'dateModified',
-				type : 'date',
-				dateFormat : 'time',
-				sortable : true
+			},{
+				xtype : 'textfield',
+				name : 'password',
+				fieldLabel : '密码'
+			},{
+				xtype : 'textfield',
+				name : 'satisficing',
+				fieldLabel : '满意度'
+			},{
+				xtype : 'textfield',
+				name : 'passage',
+				fieldLabel : '留言信息'
 			}]
 		}];
 		this.buttons = [ {
