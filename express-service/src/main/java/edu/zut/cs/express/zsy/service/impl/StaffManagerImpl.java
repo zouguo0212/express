@@ -1,4 +1,4 @@
-package edu.zut.cs.express.staff.service.impl;
+package edu.zut.cs.express.zsy.service.impl;
 
 import java.util.List;
 
@@ -10,15 +10,20 @@ import org.springframework.data.domain.ExampleMatcher.StringMatcher;
 import org.springframework.stereotype.Component;
 
 import edu.zut.cs.express.base.service.impl.GenericManagerImpl;
-import edu.zut.cs.express.staff.dao.StaffDao;
-import edu.zut.cs.express.staff.domain.Staff;
-import edu.zut.cs.express.staff.service.StaffManager;
+import edu.zut.cs.express.zsy.dao.StaffDao;
+import edu.zut.cs.express.zsy.domain.Staff;
+import edu.zut.cs.express.zsy.service.StaffManager;
+
+/**
+ * @author:zsy0216
+ * @Description:class StaffManager implement
+ */
 
 @Component
 public class StaffManagerImpl extends GenericManagerImpl<Staff, Long> implements StaffManager {
 
 	StaffDao staffDao;
-	
+
 	@Override
 	public List<Staff> findByIDnum(String idnum) {
 
@@ -31,8 +36,8 @@ public class StaffManagerImpl extends GenericManagerImpl<Staff, Long> implements
 		// 创建匹配器，即如何使用查询条件
 		ExampleMatcher matcher = ExampleMatcher.matching() // 构建对象
 				.withStringMatcher(StringMatcher.CONTAINING) // 改变默认字符串匹配方式：模糊查询
-				.withIgnoreCase(true) // 改变默认大小写忽略方式：忽略大小写			
-				.withMatcher("idnum", GenericPropertyMatchers.startsWith());  // 地址采用“开始匹配”的方式查询
+				.withIgnoreCase(true) // 改变默认大小写忽略方式：忽略大小写
+				.withMatcher("idnum", GenericPropertyMatchers.startsWith()); // 地址采用“开始匹配”的方式查询
 		// 创建实例并查询
 		Example<Staff> ex = Example.of(queryObject, matcher);
 		List<Staff> result = dao.findAll(ex);
@@ -41,7 +46,7 @@ public class StaffManagerImpl extends GenericManagerImpl<Staff, Long> implements
 
 	@Override
 	public List<Staff> findByName(String name) {
-		
+
 		// 创建查询条件数据对象
 		Staff queryObject = new Staff();
 		queryObject.setName(name);
