@@ -7,8 +7,17 @@ import javax.persistence.Table;   //指定数据库对应的表
 import edu.zut.cs.express.base.domain.BaseEntity;
 
 /**
+<<<<<<< HEAD
+ * @author Guo
+ *
+ */
+/**
+ * @author Guo
+ *
+=======
  * @author FangYe
  *  定义实体类
+>>>>>>> 753512fe52b1cee720b429afa1e78f26febf4e4e
  */
 @Table(name = "t_Register")
 @Entity
