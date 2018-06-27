@@ -1,4 +1,4 @@
-package edu.zut.cs.express.login.domain;
+package edu.zut.cs.express.houjie.domain;
 
 
 import javax.persistence.Column;
@@ -7,14 +7,15 @@ import javax.persistence.Table;
 
 import edu.zut.cs.express.base.domain.BaseEntity;
 
+/**
+ * @author houjie
+ * @Description:Define entity classes 
+ */
 @Table(name = "T_Login")
 @Entity
 public class Login extends BaseEntity {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -4376674977047164142L;
+	private static final long serialVersionUID = 2L;
 
 	@Column(name = "USERNAME")//用户名字
 	String username;
@@ -36,7 +37,10 @@ public class Login extends BaseEntity {
 	
     @Column(name="SATISFUCING")//用户满意度
     String satisficing;
-
+/**
+ * @author houjie
+ * @Description:Set and Get entity
+ */
     public String getSatisficing() {
 		return satisficing;
 	}
