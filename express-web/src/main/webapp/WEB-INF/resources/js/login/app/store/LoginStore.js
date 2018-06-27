@@ -7,11 +7,11 @@ Ext.define('login.store.LoginStore', {
 	autoSync : true,// 需要同步
 	model : 'login.model.LoginModel',
 	proxy : {
-		url : server_context + '/login/login/.json',
+		url : server_context + '/houjie/login/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/login/login/.json',
-			update : server_context + '/login/login/.json'
+			read : server_context + '/houjie/login/.json',
+			update : server_context + '/houjie/login/.json'
 		},
 		reader : {
 			type : 'json',

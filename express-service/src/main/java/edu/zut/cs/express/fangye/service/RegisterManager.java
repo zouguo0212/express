@@ -5,6 +5,10 @@ import java.util.List;
 import edu.zut.cs.express.base.service.GenericManager;
 import edu.zut.cs.express.fangye.domain.Register;
 
+/**
+ * @author FangYe
+ *  管理
+ */
 public interface RegisterManager extends GenericManager<Register, Long> {
 
 	List<Register> findByIdnum(String idnum);

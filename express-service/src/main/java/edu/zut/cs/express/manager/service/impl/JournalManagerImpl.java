@@ -14,6 +14,10 @@ import edu.zut.cs.express.manager.domain.Journal;
 import edu.zut.cs.express.manager.service.JournalManager;
 import edu.zut.cs.express.base.service.impl.GenericManagerImpl;
 
+/**
+ * @author UML
+ *
+ */
 @Component
 public class JournalManagerImpl extends GenericManagerImpl<Journal,Long> implements JournalManager{
 

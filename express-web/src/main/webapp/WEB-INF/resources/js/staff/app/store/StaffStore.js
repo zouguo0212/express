@@ -7,11 +7,11 @@ Ext.define('staff.store.StaffStore', {
 	autoSync : true,// 需要同步
 	model : 'staff.model.StaffModel',
 	proxy : {
-		url : server_context + '/staff/staff/.json',
+		url : server_context + '/zsy/staff/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/staff/staff/.json',
-			update : server_context + '/staff/staff/.json'
+			read : server_context + '/zsy/staff/.json',
+			update : server_context + '/zsy/staff/.json'
 		},
 		reader : {
 			type : 'json',

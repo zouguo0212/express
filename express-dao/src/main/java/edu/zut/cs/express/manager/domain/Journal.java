@@ -6,12 +6,14 @@ import javax.persistence.Table;
 
 import edu.zut.cs.express.base.domain.BaseEntity;
 
+/**
+ * @author UML
+ *
+ */
 @Table(name = "T_Journal")
 @Entity
 public class Journal extends BaseEntity{
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = -4376674977047164142L;
 	@Column
 	/**日志id*/
