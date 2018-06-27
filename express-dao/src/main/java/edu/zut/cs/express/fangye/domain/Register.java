@@ -6,6 +6,14 @@ import javax.persistence.Table;
 
 import edu.zut.cs.express.base.domain.BaseEntity;
 
+/**
+ * @author Guo
+ *
+ */
+/**
+ * @author Guo
+ *
+ */
 @Table(name = "t_Register")
 @Entity
 public class Register extends BaseEntity {
