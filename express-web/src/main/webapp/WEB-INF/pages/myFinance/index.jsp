@@ -21,5 +21,8 @@
     var server_context = basePath;
 </script>
 <body>
+<%
+    System.out.println(path);
+%>
 </body>
 </html>
