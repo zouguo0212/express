@@ -12,6 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import edu.zut.cs.express.base.service.GenericManagerTestCase;
 import edu.zut.cs.express.fangye.domain.Register;
 
+/**
+ * @author FangYe
+ * 管理测试
+ */
 public class RegisterManagerTest extends GenericManagerTestCase<Long, Register, RegisterManager> {
 
 	RegisterManager registerManager;
