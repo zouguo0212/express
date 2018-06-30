@@ -11,9 +11,9 @@ import edu.zut.cs.express.base.domain.BaseEntity;
  * @author houjie
  * @Description:Define entity classes 
  */
-@Table(name = "T_Login")
+@Table(name = "T_Massage")
 @Entity
-public class Login extends BaseEntity {
+public class Massage extends BaseEntity {
 
 	private static final long serialVersionUID = 2L;
 

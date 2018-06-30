@@ -1,6 +1,6 @@
-Ext.define('login.view.LoginEdit', {
+Ext.define('massage.view.MassageEdit', {
 	extend : 'Ext.window.Window',
-	alias : 'widget.loginEdit',
+	alias : 'widget.massageEdit',
 	title : '编辑用戶信息',
 	layout : 'fit',
 	autoShow : true,

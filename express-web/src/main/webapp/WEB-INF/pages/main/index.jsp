@@ -43,7 +43,7 @@
 	  	<li><a href="ujournal/index.html">用户使用日志</a></li>
 	  	<li><a href="Ymz/myUserorder/index.html">快递预约</a></li>
 	  	<li><a href="pay/index.html">支付模块</a></li>
-	  	<li><a href="houjie/login/index.html">留言模块</a></li>
+	  	<li><a href="houjie/massage/index.html">留言模块</a></li>
 	  </ul>
   </div>
 

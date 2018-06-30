@@ -10,31 +10,31 @@ import org.springframework.data.domain.ExampleMatcher.StringMatcher;
 import org.springframework.stereotype.Component;
 
 import edu.zut.cs.express.base.service.impl.GenericManagerImpl;
-import edu.zut.cs.express.houjie.dao.LoginDao;
-import edu.zut.cs.express.houjie.domain.Login;
-import edu.zut.cs.express.houjie.service.LoginManager;
+import edu.zut.cs.express.houjie.dao.MassageDao;
+import edu.zut.cs.express.houjie.domain.Massage;
+import edu.zut.cs.express.houjie.service.MassageManager;
 
 /**
  * @author houjie
- * @Description:class LoginManager implements
+ * @Description:class MassageManager implements
  * 
  */
 @Component
-public class LoginManagerImpl extends GenericManagerImpl<Login, Long> implements LoginManager {
+public class MassageManagerImpl extends GenericManagerImpl<Massage, Long> implements MassageManager {
 
-	LoginDao loginDao;
+	MassageDao massageDao;
 
 	@Autowired
-	public void setStudentDao(LoginDao loginDao) {
-		this.loginDao = loginDao;
-		this.dao = this.loginDao;
+	public void setStudentDao(MassageDao massageDao) {
+		this.massageDao = massageDao;
+		this.dao = this.massageDao;
 	}
 	
 	@Override
-	public List<Login> findByUserid(String userid) {
+	public List<Massage> findByUserid(String userid) {
 
 		// 创建查询条件数据对象
-		Login queryObject = new Login();
+		Massage queryObject = new Massage();
 		queryObject.setUserid(userid);
 		// 创建匹配器，即如何使用查询条件
 		// 创建匹配器，即如何使用查询条件
@@ -44,31 +44,31 @@ public class LoginManagerImpl extends GenericManagerImpl<Login, Long> implements
  			    .withMatcher("useid", GenericPropertyMatchers.startsWith());
 		
 		// 创建实例并查询
-		Example<Login> ex = Example.of(queryObject, matcher);
-		List<Login> result = dao.findAll(ex);
+		Example<Massage> ex = Example.of(queryObject, matcher);
+		List<Massage> result = dao.findAll(ex);
 		return result;
 	}
 
 	@Override
-	public List<Login> findByUsername(String username) {
+	public List<Massage> findByUsername(String username) {
 		
 		// 创建查询条件数据对象
-		Login queryObject = new Login();
+		Massage queryObject = new Massage();
 		queryObject.setUsername(username);
 		// 创建匹配器，即如何使用查询条件
 		ExampleMatcher matcher = ExampleMatcher.matching() // 构建对象
 				.withMatcher("name", GenericPropertyMatchers.startsWith()) // 姓名采用“开始匹配”的方式查询
 				.withIgnorePaths("dateCreated", "dateModified"); // 忽略属性：是否关注。因为是基本类型，需要忽略掉
 		// 创建实例并查询
-		Example<Login> ex = Example.of(queryObject, matcher);
-		List<Login> result = dao.findAll(ex);
+		Example<Massage> ex = Example.of(queryObject, matcher);
+		List<Massage> result = dao.findAll(ex);
 		return result;
 	}
 
 	@Autowired
-	public void setLoginDao(LoginDao loginDao) {
-		this.loginDao = loginDao;
-		this.dao = this.loginDao;
+	public void setMassageDao(MassageDao massageDao) {
+		this.massageDao = massageDao;
+		this.dao = this.massageDao;
 	}
 
 }

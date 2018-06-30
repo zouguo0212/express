@@ -1,12 +1,12 @@
 var pageSize = 20;
 
-var loginStore = Ext.create('login.store.LoginStore');
+var massageStore = Ext.create('massage.store.MassageStore');
 
-Ext.define('login.view.LoginGrid', {
+Ext.define('massage.view.MassageGrid', {
 	extend : 'Ext.grid.GridPanel',
-	alias : 'widget.loginGrid',
+	alias : 'widget.massageGrid',
 	title : 'Express - 用戶信息表',
-	store : loginStore,
+	store : massageStore,
 	columns : [ {
 		text : 'ID',
 		width : 50,
@@ -68,7 +68,7 @@ Ext.define('login.view.LoginGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : loginStore,
+		store : massageStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',

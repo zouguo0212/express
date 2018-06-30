@@ -1,6 +1,6 @@
-Ext.define('login.model.LoginModel', {
+Ext.define('massage.model.MassageModel', {
 	extend : 'Ext.data.Model',
-	alias : 'widget.LoginModel',
+	alias : 'widget.massageModel',
 	fields : [ {
 		name : 'id',
 		type : 'int',
