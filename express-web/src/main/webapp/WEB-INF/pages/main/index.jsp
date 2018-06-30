@@ -72,7 +72,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
 	<!--登录背景-->
 	<div class="q"></div>
   <div class="main">
@@ -110,7 +109,7 @@
 	  	  <li><a href="login/login/index.html">留言模块</a></li>
 	    </ul>
     </div>
-=======
+
 
 	<h2>快递小助手</h2>
 	<div>
@@ -125,7 +124,6 @@
 	  	<li><a href="pay/index.html">支付模块</a></li>
 	  	<li><a href="houjie/massage/index.html">留言模块</a></li>
 	  </ul>
->>>>>>> d4c6bbdb13c0fcaf117f631443a77ae44a7bf55a
   </div>
 
 
