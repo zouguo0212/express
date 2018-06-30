@@ -72,6 +72,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 	<!--登录背景-->
 	<div class="q"></div>
   <div class="main">
@@ -109,6 +110,22 @@
 	  	  <li><a href="login/login/index.html">留言模块</a></li>
 	    </ul>
     </div>
+=======
+
+	<h2>快递小助手</h2>
+	<div>
+		<h3>模块选择</h3>
+	  <ul class="module">
+	  	<li><a href="manager/journal/index.html">员工工作日志</a></li>
+	  	<li><a href="zouguo/myFinance/index.html">财务统计模块</a></li>
+	  	<li><a href="zsy/staff/index.html">员工基本信息</a></li>
+	  	<li><a href="fangye/register/index.html">用户信息注册</a></li>
+	  	<li><a href="ujournal/index.html">用户使用日志</a></li>
+	  	<li><a href="Ymz/myUserorder/index.html">快递预约</a></li>
+	  	<li><a href="pay/index.html">支付模块</a></li>
+	  	<li><a href="houjie/massage/index.html">留言模块</a></li>
+	  </ul>
+>>>>>>> d4c6bbdb13c0fcaf117f631443a77ae44a7bf55a
   </div>
 
 

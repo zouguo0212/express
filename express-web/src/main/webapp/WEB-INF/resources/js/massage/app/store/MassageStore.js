@@ -1,17 +1,17 @@
 var pageSize = 20;
 
-Ext.define('staff.store.StaffStore', {
+Ext.define('massage.store.MassageStore', {
 	extend : 'Ext.data.Store',
-	alias : 'widget.staffStore',
+	alias : 'widget.massageStore',
 	autoLoad : true,
 	autoSync : true,// 需要同步
-	model : 'staff.model.StaffModel',
+	model : 'massage.model.MassageModel',
 	proxy : {
-		url : server_context + '/zsy/staff/.json',
+		url : server_context + '/houjie/massage/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/zsy/staff/.json',
-			update : server_context + '/zsy/staff/.json'
+			read : server_context + '/houjie/massage/.json',
+			update : server_context + '/houjie/massage/.json'
 		},
 		reader : {
 			type : 'json',
