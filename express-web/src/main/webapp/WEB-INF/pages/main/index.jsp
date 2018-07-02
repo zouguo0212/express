@@ -95,25 +95,9 @@
 		</div>
 		
 		<!--页面内容-->
-	  <h2 style="text-align: center;">快递小助手</h2>
-	  <div>
-      <h3 style="margin: 2% 15%;">模块选择</h3>
-	    <ul class="module">
-	  	  <li><a href="manager/journal/index.html">员工工作日志</a></li>
-	  	  <li><a href="zouguo/myFinance/index.html">财务统计模块</a></li>
-	  	  <li><a href="staff/staff/index.html">员工基本信息</a></li>
-	  	  <li><a href="fangye/register/index.html">用户信息注册</a></li>
-	  	  <li><a href="ujournal/index.html">用户使用日志</a></li>
-	  	  <li><a href="Ymz/myUserorder/index.html">快递预约</a></li>
-	  	  <li><a href="pay/index.html">支付模块</a></li>
-	  	  <li><a href="login/login/index.html">留言模块</a></li>
-	    </ul>
-    </div>
-
-
-	<h2>快递小助手</h2>
+	<h2 style="text-align: center;">快递小助手</h2>
 	<div>
-		<h3>模块选择</h3>
+		<h3 style="margin: 2% 15%;">模块选择</h3>
 	  <ul class="module">
 	  	<li><a href="manager/journal/index.html">员工工作日志</a></li>
 	  	<li><a href="zouguo/myFinance/index.html">财务统计模块</a></li>
@@ -129,5 +113,4 @@
 
 </body>
 
-</html>
 </html>
