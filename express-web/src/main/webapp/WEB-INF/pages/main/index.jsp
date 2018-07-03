@@ -107,6 +107,7 @@
 	  	<li><a href="Ymz/myUserorder/index.html">快递预约</a></li>
 	  	<li><a href="pay/index.html">支付模块</a></li>
 	  	<li><a href="houjie/massage/index.html">留言模块</a></li>
+	  	<li><a href="manager/journal/journal.html">ww</a></li>
 	  </ul>
   </div>
 
