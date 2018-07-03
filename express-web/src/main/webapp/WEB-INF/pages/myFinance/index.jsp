@@ -2,7 +2,7 @@
          pageEncoding="UTF-8"%>
 <%
     String path = request.getContextPath();
-    String extjsPath = "http://222.22.94.22:8090/ext-4.2.1.883/";
+    String extjsPath = "http://202.196.37.91:8080/ext-4.2.1.883/";
 %>
 <html>
 <head>
@@ -20,9 +20,7 @@
     var basePath = localObj.protocol + "//" + localObj.host + "/" + contextPath;
     var server_context = basePath;
 </script>
+<script	src="${pageContext.request.contextPath}/resources/js/myFinance/app.js"></script>
 <body>
-<%
-    System.out.println(path);
-%>
 </body>
 </html>

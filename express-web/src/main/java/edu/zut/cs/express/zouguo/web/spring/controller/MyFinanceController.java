@@ -20,7 +20,7 @@ public class MyFinanceController extends GenericController <MyFinance,Long,MyFin
         String result = "/myFinance/index";
         return result;
     }
-    
+
     @Autowired
     public void setMyFinanceManager(MyFinanceManager myFinanceManager){
         this.myFinanceManager = myFinanceManager;
